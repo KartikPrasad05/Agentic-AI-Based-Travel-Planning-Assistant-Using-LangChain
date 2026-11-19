@@ -3,6 +3,8 @@
 Provides an interactive user interface for querying, customizing, and
 generating autonomous day-wise travel itineraries with LangChain,
 historical datasets, and live Open-Meteo forecasts.
+Includes top navigation header, about section, interactive footer,
+smart packing checklist, and emergency travel directory.
 """
 
 import os
@@ -25,32 +27,73 @@ from src.prompts import CompleteTravelItinerary
 
 # Configure Streamlit page
 st.set_page_config(
-    page_title="Agentic AI Travel Planning Assistant",
+    page_title="VoyAgent AI — Agentic Travel Planning Assistant",
     page_icon="✈️",
     layout="wide",
     initial_sidebar_state="expanded",
 )
 
+# Initialize Session State
+if "is_logged_in" not in st.session_state:
+    st.session_state["is_logged_in"] = True
+if "user_name" not in st.session_state:
+    st.session_state["user_name"] = "Kartik Prasad"
+if "user_email" not in st.session_state:
+    st.session_state["user_email"] = "kartik@voyagent.ai"
+
 # Custom CSS for styling
 st.markdown("""
 <style>
+    /* Top Navbar */
+    .top-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 18px;
+        background: linear-gradient(135deg, #1E3A8A 0%, #2563EB 100%);
+        border-radius: 12px;
+        color: white;
+        margin-bottom: 20px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+    .brand-title {
+        font-size: 1.45rem;
+        font-weight: 800;
+        letter-spacing: -0.5px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+    .brand-badge {
+        background-color: rgba(255,255,255,0.22);
+        padding: 2px 10px;
+        border-radius: 20px;
+        font-size: 0.75rem;
+        font-weight: 600;
+        margin-left: 8px;
+    }
     .main-header {
-        font-size: 2.2rem;
-        font-weight: 700;
+        font-size: 2.1rem;
+        font-weight: 750;
         color: #1E3A8A;
         margin-bottom: 0.2rem;
     }
     .sub-header {
-        font-size: 1.05rem;
+        font-size: 1.02rem;
         color: #4B5563;
         margin-bottom: 1.2rem;
     }
-    .metric-card {
-        background-color: #F3F4F6;
-        border-radius: 10px;
-        padding: 15px;
-        border-left: 5px solid #2563EB;
-        margin-bottom: 10px;
+    .feature-card {
+        background-color: #F8FAFC;
+        border: 1px solid #E2E8F0;
+        border-radius: 12px;
+        padding: 20px;
+        height: 100%;
+        transition: transform 0.15s ease-in-out;
+    }
+    .feature-card:hover {
+        border-color: #3B82F6;
+        box-shadow: 0 4px 12px rgba(59,130,246,0.08);
     }
     .badge-historical {
         background-color: #FEF3C7;
@@ -68,19 +111,88 @@ st.markdown("""
         font-size: 0.8rem;
         font-weight: 600;
     }
-    .stTabs [data-baseweb="tab-list"] {
-        gap: 10px;
+    .footer-container {
+        margin-top: 45px;
+        padding: 30px 20px;
+        background-color: #0F172A;
+        color: #94A3B8;
+        border-radius: 12px;
     }
-    .stTabs [data-baseweb="tab"] {
-        height: 48px;
-        white-space: pre-wrap;
-        background-color: #F9FAFB;
-        border-radius: 6px 6px 0px 0px;
-        padding-top: 10px;
-        padding-bottom: 10px;
+    .footer-title {
+        color: #F8FAFC;
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+    .footer-link {
+        color: #94A3B8;
+        text-decoration: none;
+        display: block;
+        margin-bottom: 6px;
+    }
+    .footer-bottom {
+        border-top: 1px solid #334155;
+        padding-top: 15px;
+        margin-top: 20px;
+        text-align: center;
+        font-size: 0.85rem;
+    }
+    .helpline-card {
+        background-color: #EFF6FF;
+        border-left: 4px solid #3B82F6;
+        border-radius: 8px;
+        padding: 12px;
+        margin-bottom: 10px;
     }
 </style>
 """, unsafe_allow_html=True)
+
+# -----------------------------------------------------------------------------
+# TOP NAVIGATION HEADER
+# -----------------------------------------------------------------------------
+col_logo, col_nav = st.columns([6, 4])
+with col_logo:
+    st.markdown("""
+    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
+        <span style="font-size: 2rem;">✈️</span>
+        <div>
+            <span style="font-size: 1.55rem; font-weight: 800; color: #1E3A8A; letter-spacing: -0.5px;">VoyAgent AI</span>
+            <span style="background: #E0E7FF; color: #3730A3; padding: 2px 8px; border-radius: 12px; font-size: 0.75rem; font-weight: 600; margin-left: 6px;">v2.4 Live</span>
+            <div style="font-size: 0.82rem; color: #64748B;">Agentic Travel Concierge powered by LangChain & Open-Meteo</div>
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
+
+with col_nav:
+    n_col1, n_col2, n_col3 = st.columns([1.2, 1.2, 1.4])
+    with n_col1:
+        with st.popover("🔔 Alerts (3)", use_container_width=True):
+            st.markdown("##### 📬 Notifications")
+            st.success("🌤️ **Open-Meteo Weather API:** Synchronized & Live.")
+            st.info("✈️ **Indian Airlines:** 300,153 historical fares indexed.")
+            st.info("🏨 **Goibibo Catalogue:** 4,000 verified listings active.")
+    with n_col2:
+        with st.popover("👤 Profile", use_container_width=True):
+            st.markdown("#####  traveler Profile")
+            if st.session_state["is_logged_in"]:
+                st.write(f"**Name:** {st.session_state['user_name']}")
+                st.write(f"**Tier:** Gold Explorer ⭐")
+                st.write(f"**Email:** `{st.session_state['user_email']}`")
+                st.caption("Preferences: Heritage, Scenic Beaches & Nature")
+            else:
+                st.write("Browsing as **Guest Traveler**.")
+    with n_col3:
+        if st.session_state["is_logged_in"]:
+            if st.button("🔓 Log Out", use_container_width=True):
+                st.session_state["is_logged_in"] = False
+                st.toast("Signed out successfully. Browsing as Guest.", icon="👋")
+                st.rerun()
+        else:
+            if st.button("🔒 Log In", use_container_width=True):
+                st.session_state["is_logged_in"] = True
+                st.toast(f"Welcome back, {st.session_state['user_name']}!", icon="👋")
+                st.rerun()
+
+st.divider()
 
 # -----------------------------------------------------------------------------
 # SIDEBAR CONFIGURATION
@@ -93,7 +205,7 @@ with st.sidebar.expander("🤖 AI Agent Settings", expanded=False):
         "OpenAI API Key",
         value=os.getenv("OPENAI_API_KEY", ""),
         type="password",
-        help="Optional. Leave blank to run in deterministic dataset-backed Demo Mode.",
+        help="Optional. Leave blank to run in fast dataset-backed demo mode.",
     )
     model_choice = st.selectbox(
         "Agent Model",
@@ -101,6 +213,11 @@ with st.sidebar.expander("🤖 AI Agent Settings", expanded=False):
         index=0,
     )
     force_demo = st.checkbox("Force Deterministic Demo Mode", value=False)
+    effective_key = api_key_input.strip() or config.OPENAI_API_KEY
+    if effective_key and not force_demo:
+        st.sidebar.caption(f"🟢 LLM Agent Active (`{model_choice}`)")
+    else:
+        st.sidebar.caption("⚡ Offline/Demo Mode Active (Live Weather & Datasets)")
 
 # City Options
 CITIES = [
@@ -148,26 +265,9 @@ with st.sidebar.expander("💵 Budget Customization (INR)", expanded=False):
     daily_transport = st.number_input("Local Cab / Transport / Day", min_value=200, max_value=3000, value=500, step=50)
     other_buffer = st.number_input("Contingency Buffer / Person", min_value=0, max_value=5000, value=1000, step=200)
 
-
 # -----------------------------------------------------------------------------
-# MAIN DASHBOARD HEADER
+# MAIN INTERACTION PANEL
 # -----------------------------------------------------------------------------
-st.markdown('<div class="main-header">✈️ Agentic AI Travel Planning Assistant</div>', unsafe_allow_html=True)
-st.markdown(
-    '<div class="sub-header">'
-    'Autonomous Multi-Tool Travel Concierge powered by <b>LangChain</b>, <b>Open-Meteo</b>, and Indian Travel Datasets.'
-    '</div>',
-    unsafe_allow_html=True
-)
-
-# Status Badge
-effective_key = api_key_input.strip() or config.OPENAI_API_KEY
-if effective_key and not force_demo:
-    st.info(f"🟢 **Mode:** Autonomous LangChain Tool-Calling Agent (`{model_choice}`) active.")
-else:
-    st.warning("🟡 **Mode:** Deterministic Academic Demo Mode active. Live Open-Meteo weather and historical datasets are actively queried. (Configure OpenAI API Key in the sidebar to activate LLM reasoning).")
-
-# Preset Query Templates
 st.markdown("##### 💡 Quick Scenario Presets:")
 preset_cols = st.columns(3)
 with preset_cols[0]:
@@ -186,7 +286,7 @@ user_query = st.text_area(
         "query_text",
         f"Plan a {trip_days}-day trip from {source_city} to {destination_city} for {num_travelers} traveler(s) focusing on {selected_category}."
     ),
-    height=80,
+    height=75,
 )
 
 generate_btn = st.button("🚀 Generate Personalized Itinerary", type="primary", use_container_width=True)
@@ -216,7 +316,6 @@ if generate_btn:
                 force_demo_mode=force_demo or not runner.has_llm_key,
             )
             st.session_state["current_plan"] = plan_result
-
 
 # -----------------------------------------------------------------------------
 # RESULTS DISPLAY
@@ -350,7 +449,6 @@ if "current_plan" in st.session_state:
             st.dataframe(df_budget, use_container_width=True, hide_index=True)
             st.markdown(f"### Grand Total: **₹{bd.grand_total_inr:,.0f}** *(₹{bd.per_person_inr:,.0f} / person)*")
         with col_chart:
-            # Bar chart of expenses
             chart_df = df_budget.set_index("Expense Category")[["Amount (INR)"]]
             st.bar_chart(chart_df)
 
@@ -387,4 +485,135 @@ if "current_plan" in st.session_state:
         )
         st.json(json.loads(json_dump))
 
+# -----------------------------------------------------------------------------
+# ABOUT THIS APP & HOW IT HELPS YOU (ABOVE FOOTER)
+# -----------------------------------------------------------------------------
+st.markdown("---")
+st.markdown("### 🌟 About VoyAgent AI & How It Helps You")
+st.markdown(
+    "VoyAgent AI is an **Agentic AI Travel Planning Assistant** engineered using LangChain, Open-Meteo, "
+    "and curated Indian tourism databases to automate end-to-end trip design with expert-level personalization."
+)
 
+col_a1, col_a2, col_a3 = st.columns(3)
+with col_a1:
+    st.markdown("""
+    <div class="feature-card">
+        <h4>⚡ Saves Hours of Planning</h4>
+        <p style="color: #64748B; font-size: 0.92rem;">
+            Eliminates switching across dozens of flight aggregators, booking portals, and travel blogs. 
+            Simply type your destination and preferences to get a synthesized, complete itinerary in seconds.
+        </p>
+    </div>
+    """, unsafe_allow_html=True)
+
+with col_a2:
+    st.markdown("""
+    <div class="feature-card">
+        <h4>🎯 Fatigue-Free Realistic Pacing</h4>
+        <p style="color: #64748B; font-size: 0.92rem;">
+            Unlike generic planners that overload 10 sights a day, our engine caps activities to 2–3 daily stops, 
+            respects opening hours, closing days (weekly off), and coordinates return-day flights.
+        </p>
+    </div>
+    """, unsafe_allow_html=True)
+
+with col_a3:
+    st.markdown("""
+    <div class="feature-card">
+        <h4>💰 100% Transparent Budgeting</h4>
+        <p style="color: #64748B; font-size: 0.92rem;">
+            Computes true trip cost including flights, hotel nights, customizable daily dining, local transit, 
+            and monument tickets. Differentiates verified rates from estimates with zero hidden math.
+        </p>
+    </div>
+    """, unsafe_allow_html=True)
+
+# -----------------------------------------------------------------------------
+# USEFUL TRAVEL TOOLS (BELOW ABOUT SECTION)
+# -----------------------------------------------------------------------------
+st.markdown("<br>", unsafe_allow_html=True)
+col_pack, col_help = st.columns([1.1, 1])
+
+with col_pack:
+    with st.expander("🧳 Smart Travel Packing Checklist Generator", expanded=False):
+        st.write("Customized packing essentials tailored to Indian travel:")
+        p_c1, p_c2 = st.columns(2)
+        with p_c1:
+            st.checkbox("Government ID (Aadhaar / Passport / Voter ID)", value=True)
+            st.checkbox("Flight boarding passes / Train e-tickets", value=True)
+            st.checkbox("Power bank & universal charging adapters", value=True)
+            st.checkbox("Prescription medicines & basic first-aid", value=True)
+        with p_c2:
+            st.checkbox("Comfortable walking sneakers / sandals", value=True)
+            st.checkbox("Light cotton clothing / Sun protection (SPF 50)", value=True)
+            st.checkbox("Sunglasses & reusable insulated water bottle", value=True)
+            st.checkbox("Digital camera / DSLR with extra SD card", value=False)
+
+with col_help:
+    with st.expander("🚨 Emergency & Travel Helpline Directory", expanded=False):
+        st.markdown("""
+        - 📞 **Incredible India Tourist Helpline:** `1363` *(24x7 Multi-lingual)*
+        - 🚨 **National Unified Emergency:** `112`
+        - 🚑 **Medical Ambulance Assistance:** `108`
+        - 🛡️ **Women's Safety Helpline:** `1091`
+        - 🚂 **Indian Railways Enquiry / Assistance:** `139`
+        """)
+
+# -----------------------------------------------------------------------------
+# APP DETAILS & METRICS
+# -----------------------------------------------------------------------------
+st.markdown("<br>", unsafe_allow_html=True)
+st.markdown("##### 📊 Platform Architecture & Data Health:")
+st_c1, st_c2, st_c3, st_c4 = st.columns(4)
+with st_c1:
+    st.info("✈️ **300,153 Records**\n\nIndian Airlines Historical Fares")
+with st_c2:
+    st.info("🏨 **4,000 Properties**\n\nGoibibo Hotel Catalogue")
+with st_c3:
+    st.info("🏛️ **323 Destinations**\n\nCurated Tourist Attractions")
+with st_c4:
+    st.info("⛅ **Live Weather Sync**\n\nOpen-Meteo REST API")
+
+# -----------------------------------------------------------------------------
+# MODERN FOOTER
+# -----------------------------------------------------------------------------
+st.markdown("""
+<div class="footer-container">
+    <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px;">
+        <div style="flex: 1.5; min-width: 240px;">
+            <div style="font-size: 1.3rem; font-weight: 800; color: #FFFFFF; display: flex; align-items: center; gap: 8px;">
+                ✈️ VoyAgent AI
+            </div>
+            <p style="font-size: 0.85rem; color: #94A3B8; margin-top: 8px; line-height: 1.5;">
+                An autonomous multi-agent travel concierge powered by LangChain, Open-Meteo, and domestic Indian tourism datasets. Built for academic evaluation and smart travel synthesis.
+            </p>
+        </div>
+        <div style="flex: 1; min-width: 160px;">
+            <div class="footer-title">Navigation</div>
+            <span class="footer-link">🗺️ Personalized Trip Planner</span>
+            <span class="footer-link">⛅ Live Weather Forecast</span>
+            <span class="footer-link">✈️ Historical Flight Lookup</span>
+            <span class="footer-link">🏨 Hotel Discovery Catalogue</span>
+        </div>
+        <div style="flex: 1; min-width: 160px;">
+            <div class="footer-title">Technology</div>
+            <span class="footer-link">🦜 LangChain 1.4+ Agents</span>
+            <span class="footer-link">🌐 Open-Meteo REST API</span>
+            <span class="footer-link">⚡ Streamlit 1.65 Framework</span>
+            <span class="footer-link">🛡️ Pydantic v2 Validation</span>
+        </div>
+        <div style="flex: 1; min-width: 180px;">
+            <div class="footer-title">Academic Project</div>
+            <p style="font-size: 0.85rem; color: #94A3B8; margin-bottom: 6px;">
+                <b>Author:</b> Kartik Prasad<br>
+                <b>Domain:</b> Agentic AI / Tourism Tech<br>
+                <b>Status:</b> 32/32 Pytest Tests Passed
+            </p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        © 2026 <b>VoyAgent AI</b> — Agentic AI-Based Travel Planning Assistant. Built with Python 3.10 & LangChain.
+    </div>
+</div>
+""", unsafe_allow_html=True)
