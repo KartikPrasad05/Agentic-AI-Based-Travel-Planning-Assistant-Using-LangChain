@@ -1,0 +1,324 @@
+Unnamed: 0,zone,state,city,destination_name,type,establishment_year,time_needed_hrs,google_rating,entrance_fee_inr,airport_within_50km,weekly_off,significance,dslr_allowed,reviews_lakhs,best_time_to_visit,popularity_tier,cost_category,rating_tier,value_score,performance_score,needs_attention
+0,Northern,Delhi,Delhi,India Gate,War Memorial,1921.0,0.5,4.6,0.0,Yes,,Historical,Yes,2.6,Evening,Very High,Free,Excellent,4.6,0.632,False
+1,Northern,Delhi,Delhi,Humayun's Tomb,Tomb,1572.0,2.0,4.5,30.0,Yes,,Historical,Yes,0.4,Afternoon,High,Low (<=50),Good,3.4615384615384612,0.469,False
+2,Northern,Delhi,Delhi,Akshardham Temple,Temple,2005.0,5.0,4.6,60.0,Yes,,Religious,No,0.4,Afternoon,High,Moderate (51-200),Excellent,2.8749999999999996,0.484,False
+3,Northern,Delhi,Delhi,Waste to Wonder Park,Theme Park,2019.0,2.0,4.1,50.0,Yes,Monday,Environmental,Yes,0.27,Evening,High,Low (<=50),Good,2.733333333333333,0.403,False
+4,Northern,Delhi,Delhi,Jantar Mantar,Observatory,1724.0,2.0,4.2,15.0,Yes,,Scientific,Yes,0.31,Morning,High,Low (<=50),Good,3.6521739130434785,0.42,False
+5,Northern,Delhi,Delhi,Chandni Chowk,Market,1700.0,3.0,4.2,0.0,Yes,Sunday,Market,Yes,0.25,Afternoon,High,Free,Good,4.2,0.416,False
+6,Northern,Delhi,Delhi,Lotus Temple,Temple,1986.0,1.0,4.5,0.0,Yes,Monday,Religious,Yes,0.59,Evening,Very High,Free,Good,4.5,0.482,False
+7,Northern,Delhi,Delhi,Red Fort,Fort,1648.0,2.0,4.5,35.0,Yes,,Historical,Yes,1.5,Afternoon,Very High,Low (<=50),Good,3.333333333333333,0.544,False
+8,Northern,Delhi,Delhi,Agrasen ki Baoli,Stepwell,1400.0,1.0,4.2,0.0,Yes,,Historical,Yes,0.41,Afternoon,High,Free,Good,4.2,0.427,False
+9,Northern,Delhi,Delhi,Sunder Nursery,Park,1600.0,2.0,4.6,0.0,Yes,,Botanical,Yes,0.16,Afternoon,Medium,Free,Excellent,4.6,0.467,False
+10,Northern,Delhi,Delhi,Garden of Five Senses,Park,2003.0,2.0,4.1,35.0,Yes,,Botanical,Yes,0.23,Morning,High,Low (<=50),Good,3.0370370370370368,0.401,False
+11,Northern,Delhi,Delhi,Lodhi Garden,Park,1500.0,1.0,4.5,0.0,Yes,,Botanical,Yes,0.48,All,High,Free,Good,4.5,0.475,False
+12,Northern,Delhi,Delhi,National Gallery of Modern Art,Museum,1954.0,3.0,4.5,20.0,Yes,Monday,Artistic,Yes,0.08,All,Medium,Low (<=50),Good,3.75,0.448,False
+13,Northern,Delhi,Delhi,National Zoological Park ,Zoo,1959.0,3.0,4.1,80.0,Yes,Friday,Environmental,Yes,0.41,All,High,Moderate (51-200),Good,2.2777777777777777,0.413,False
+14,Northern,Delhi,Delhi,Qutub Minar,Monument,1192.0,1.0,4.5,35.0,Yes,,Historical,Yes,1.37,Afternoon,Very High,Low (<=50),Good,3.333333333333333,0.535,False
+15,Northern,Delhi,Delhi,National Science Centre,Science,1992.0,5.0,4.4,70.0,Yes,,Scientific,Yes,0.23,All,High,Moderate (51-200),Good,2.588235294117647,0.443,False
+16,Western,Maharastra,Mumbai,Marine Drive,Promenade,,2.0,4.5,0.0,Yes,,Scenic,Yes,1.5,Evening,Very High,Free,Good,4.5,0.544,False
+17,Western,Maharastra,Mumbai,Gateway of India,Monument,1924.0,1.0,4.6,0.0,Yes,,Historical,Yes,3.6,All,Very High,Free,Excellent,4.6,0.7,False
+18,Western,Maharastra,Mumbai,Chhatrapati Shivaji Maharaj Vastu Sangrahalaya,Museum,1922.0,1.0,4.6,500.0,Yes,,Historical,Yes,0.34,All,High,High (201-1000),Excellent,0.7666666666666666,0.479,False
+19,Western,Maharastra,Mumbai,Sanjay Gandhi National Park,National Park,1996.0,3.0,4.3,50.0,Yes,Monday,Wildlife,Yes,0.6,All,Very High,Low (<=50),Good,2.8666666666666667,0.454,False
+20,Western,Maharastra,Mumbai,Siddhivinayak Temple,Temple,1881.0,2.0,4.8,0.0,Yes,,Religious,No,1.05,All,Very High,Free,Excellent,4.8,0.556,False
+21,Western,Maharastra,Mumbai,Mahalaxmi Temple,Temple,1831.0,1.0,4.7,0.0,Yes,,Religious,No,0.33,All,High,Free,Excellent,4.7,0.493,False
+22,Western,Maharastra,Mumbai,Haji Ali Dargah,Religious Shrine,1431.0,2.0,4.4,0.0,Yes,,Religious,No,0.16,All,Medium,Free,Good,4.4,0.439,False
+23,Western,Maharastra,Mumbai,Chowpatty Beach,Beach,,2.0,4.3,0.0,Yes,,Recreational,Yes,0.05,Evening,Low,Free,Good,4.3,0.417,False
+24,Western,Maharastra,Mumbai,Essel World,Amusement Park,1986.0,5.0,4.3,1149.0,Yes,,Recreational,Yes,0.27,All,High,Premium (1000+),Good,0.344275420336269,0.432,False
+25,Western,Maharastra,Mumbai,Elephanta Caves,Monument,1987.0,4.0,4.3,550.0,Yes,,Historical,Yes,0.35,All,High,High (201-1000),Good,0.6615384615384615,0.437,False
+26,Western,Maharastra,Lonavala,Imagicaa,Amusement Park,2013.0,5.0,1.4,1149.0,No,Monday,Recreational,Yes,0.95,All,Very High,Premium (1000+),Below Average,0.1120896717373899,0.064,True
+27,Southern,Karnataka,Bangalore,Bangalore Palace,Palace,1878.0,2.0,4.2,500.0,Yes,Monday,Historical,Yes,0.9,Morning,Very High,High (201-1000),Good,0.7000000000000001,0.46,False
+28,Southern,Karnataka,Bangalore,Lalbagh Botanical Garden,Botanical Garden,1760.0,1.5,4.4,20.0,Yes,,Nature,Yes,1.5,Evening,Very High,Low (<=50),Good,3.666666666666667,0.529,False
+29,Southern,Karnataka,Bangalore,Cubbon Park,Park,1870.0,1.0,4.4,0.0,Yes,,Nature,Yes,1.32,Morning,Very High,Free,Good,4.4,0.517,False
+30,Southern,Karnataka,Bangalore,Vidhana Soudha,Government Building,1956.0,0.5,4.6,0.0,Yes,,Architectural,No,0.8,Morning,Very High,Free,Excellent,4.6,0.511,False
+31,Southern,Karnataka,Bangalore,ISKCON Temple Bangalore,Temple,1997.0,1.0,4.6,0.0,Yes,,Religious,Yes,1.14,Evening,Very High,Free,Excellent,4.6,0.534,False
+32,Southern,Telangana,Hyderabad,Charminar,Landmark,1591.0,1.0,4.5,25.0,Yes,Friday,Historical,Yes,2.1,Morning,Very High,Low (<=50),Good,3.6,0.584,False
+33,Southern,Telangana,Hyderabad,Golconda Fort,Fort,1600.0,2.0,4.4,30.0,Yes,,Historical,Yes,1.2,Morning,Very High,Low (<=50),Good,3.3846153846153846,0.509,False
+34,Southern,Telangana,Hyderabad,Hussain Sagar Lake,Lake,1563.0,1.0,4.3,0.0,Yes,,Scenic,Yes,0.5,Evening,High,Free,Good,4.3,0.447,False
+35,Southern,Telangana,Hyderabad,Ramoji Film City,Film Studio,1996.0,4.0,4.4,1150.0,Yes,,Entertainment,Yes,0.45,All,High,Premium (1000+),Good,0.35200000000000004,0.458,False
+36,Southern,Telangana,Hyderabad,Salar Jung Museum,Museum,1951.0,2.0,4.4,20.0,Yes,,Historical,Yes,0.67,All,Very High,Low (<=50),Good,3.666666666666667,0.473,False
+37,Southern,Telangana,Hyderabad,Qutb Shahi Tombs,Tombs,1600.0,1.0,4.4,25.0,Yes,,Historical,Yes,0.2,Morning,High,Low (<=50),Good,3.5200000000000005,0.441,False
+38,Southern,Telangana,Hyderabad,Birla Mandir,Temple,1976.0,1.0,4.7,0.0,Yes,,Religious,No,0.41,All,High,Free,Excellent,4.7,0.498,False
+39,Southern,Telangana,Hyderabad,Chowmahalla Palace,Palace,1800.0,1.5,4.4,80.0,Yes,,Historical,Yes,0.45,Morning,High,Moderate (51-200),Good,2.4444444444444446,0.458,False
+40,Southern,Telangana,Hyderabad,Nehru Zoological Park,Zoo,1963.0,3.0,4.2,50.0,Yes,,Wildlife,Yes,0.86,Morning,Very High,Low (<=50),Good,2.8000000000000003,0.458,False
+41,Southern,Telangana,Hyderabad,Lumbini Park,Park,1994.0,1.0,4.1,20.0,Yes,,Recreational,Yes,0.73,Evening,Very High,Low (<=50),Good,3.4166666666666665,0.434,False
+42,Eastern,West Bengal,Kolkata,Victoria Memorial,Museum,1921.0,1.5,4.6,30.0,Yes,Monday,Historical,Yes,0.73,Morning,Very High,Low (<=50),Excellent,3.538461538461538,0.506,False
+43,Eastern,West Bengal,Kolkata,Howrah Bridge,Bridge,1943.0,0.5,4.6,0.0,Yes,,Architectural,No,1.2,Anytime,Very High,Free,Excellent,4.6,0.538,False
+44,Eastern,West Bengal,Kolkata,Indian Museum,Museum,1814.0,2.0,4.6,50.0,Yes,Monday,Historical,Yes,0.18,Morning,High,Low (<=50),Excellent,3.0666666666666664,0.469,False
+45,Eastern,West Bengal,Kolkata,Dakshineswar Kali Temple,Temple,1855.0,1.0,4.7,0.0,Yes,,Religious,Yes,0.82,Morning,Very High,Free,Excellent,4.7,0.526,False
+46,Eastern,West Bengal,Kolkata,Kalighat Kali Temple,Temple,1809.0,1.0,4.4,0.0,Yes,,Religious,Yes,0.5,Morning,Very High,Free,Good,4.4,0.462,False
+47,Eastern,West Bengal,Kolkata,Eden Gardens,Cricket Ground,1864.0,3.0,4.1,2500.0,Yes,,Sports,Yes,0.1,All,Medium,Premium (1000+),Good,0.1576923076923077,0.392,False
+48,Eastern,West Bengal,Kolkata,Alipore Zoological Gardens,Zoo,1876.0,2.0,4.3,25.0,Yes,,Wildlife,Yes,0.66,Afternoon,Very High,Low (<=50),Good,3.44,0.458,False
+49,Eastern,West Bengal,Kolkata,Science City Kolkata,Science,1997.0,3.0,4.4,60.0,Yes,,Educational,Yes,0.88,All,Very High,Moderate (51-200),Good,2.75,0.487,False
+50,Eastern,West Bengal,Kolkata,Belur Math,Site,1898.0,1.5,4.7,0.0,Yes,,Religious,Yes,0.47,Morning,High,Free,Excellent,4.7,0.503,False
+51,Eastern,West Bengal,Kolkata,Marble Palace,Palace,1835.0,1.0,4.4,0.0,Yes,,Historical,Yes,0.1,Afternoon,Medium,Free,Good,4.4,0.435,False
+52,Southern,Goa,Goa,Calangute Beach,Beach,,2.0,4.4,0.0,Yes,,Scenic,Yes,0.26,Evening,High,Free,Good,4.4,0.445,False
+53,Southern,Goa,Goa,Basilica of Bom Jesus,Church,1605.0,1.0,4.5,0.0,Yes,,Historical,Yes,0.59,Afternoon,Very High,Free,Good,4.5,0.482,False
+54,Southern,Goa,Goa,Fort Aguada,Fort,1612.0,1.5,4.2,0.0,Yes,,Historical,Yes,0.95,Morning,Very High,Free,Good,4.2,0.464,False
+55,Southern,Goa,Goa,Dudhsagar Falls,Waterfall,,3.0,4.6,500.0,Yes,,Nature,Yes,0.3,Afternoon,High,High (201-1000),Excellent,0.7666666666666666,0.477,False
+56,Southern,Goa,Goa,Anjuna Beach,Beach,,2.0,4.4,0.0,Yes,,Scenic,Yes,0.18,Evening,High,Free,Good,4.4,0.44,False
+57,Southern,Goa,Goa,Chapora Fort,Fort,1617.0,1.0,4.2,0.0,Yes,,Historical,Yes,0.19,Evening,High,Free,Good,4.2,0.412,False
+58,Southern,Goa,Goa,Se Cathedral,Church,1640.0,1.0,4.5,0.0,Yes,,Historical,Yes,0.05,Afternoon,Low,Free,Good,4.5,0.446,False
+59,Southern,Goa,Goa,Baga Beach,Beach,,2.0,4.5,0.0,Yes,,Scenic,Yes,0.35,Evening,High,Free,Good,4.5,0.466,False
+60,Southern,Goa,Goa,Arambol Beach,Beach,,2.0,4.6,0.0,Yes,,Scenic,Yes,0.1,Evening,Medium,Free,Excellent,4.6,0.463,False
+61,Southern,Goa,Goa,Palolem Beach,Beach,,2.0,4.6,0.0,Yes,,Scenic,Yes,0.27,Evening,High,Free,Excellent,4.6,0.475,False
+62,Southern,Goa,Goa,Colva Beach,Beach,,2.0,4.3,0.0,Yes,,Scenic,Yes,0.1,Evening,Medium,Free,Good,4.3,0.42,False
+63,Southern,Goa,Goa,Miramar Beach,Beach,,1.5,4.2,0.0,Yes,,Scenic,Yes,0.3,Evening,High,Free,Good,4.2,0.42,False
+64,Southern,Goa,Goa,Aguada Beach,Beach,,2.0,4.5,0.0,Yes,,Scenic,Yes,0.01,Evening,Low,Free,Good,4.5,0.443,False
+65,Southern,Goa,Goa,Dr. Salim Ali Bird Santuary,Bird Sanctuary,1988.0,2.0,3.9,10.0,Yes,,Wildlife,Yes,0.03,Afternoon,Low,Low (<=50),Average,3.545454545454545,0.358,False
+66,Western,Gujarat,Ahmedabad,Sabarmati Ashram,Historical,1915.0,1.5,4.6,0.0,Yes,,Historical,Yes,0.35,Morning,High,Free,Excellent,4.6,0.48,False
+67,Western,Gujarat,Dwarka,Dwarkadhish Temple,Temple,,2.0,4.7,0.0,No,,Religious,No,0.59,Evening,Very High,Free,Excellent,4.7,0.511,False
+68,Western,Gujarat,Junagadh,Gir National Park,National Park,1965.0,3.0,4.5,3500.0,No,,Wildlife,Yes,0.08,Morning,Medium,Premium (1000+),Good,0.125,0.448,False
+69,Western,Gujarat,Bhuj,White Desert,Site,1950.0,2.5,4.6,0.0,Yes,,Nature,Yes,0.12,Evening,Medium,Free,Excellent,4.6,0.465,False
+70,Western,Gujarat,Vadodara,Laxmi Vilas Palace,Palace,1890.0,2.0,4.4,200.0,Yes,Monday,Historical,Yes,0.17,Afternoon,Medium,Moderate (51-200),Good,1.4666666666666668,0.439,False
+71,Western,Gujarat,Somnath,Somnath Temple,Temple,1951.0,2.0,4.8,0.0,No,,Religious,No,0.39,Morning,High,Free,Excellent,4.8,0.511,False
+72,Western,Gujarat,Rann Of Kutch,Rann Utsav,Cultural,,3.0,4.9,7500.0,Yes,,Cultural,Yes,0.1,Evening,Medium,Premium (1000+),Excellent,0.06447368421052632,0.506,False
+73,Western,Gujarat,Kevadia,Statue of Unity,Monument,2018.0,3.0,4.6,350.0,No,Monday,Historical,Yes,0.67,All,Very High,High (201-1000),Excellent,1.0222222222222221,0.502,False
+74,Western,Gujarat,Gandhinagar,Dandi Kutir,Museum,2013.0,1.5,4.5,0.0,No,,Historical,Yes,0.05,All,Low,Free,Good,4.5,0.446,False
+75,Western,Gujarat,Ahmedabad,Sabarmati Riverfront,Urban Development Project,2012.0,1.0,4.6,0.0,Yes,,Recreational,Yes,0.1,Evening,Medium,Free,Excellent,4.6,0.463,False
+76,Western,Gujarat,Ahmedabad,Manek Chowk,Market,,2.0,4.4,0.0,Yes,,Food,Yes,0.49,Night,High,Free,Good,4.4,0.461,False
+77,Western,Gujarat,Ahmedabad,Kankaria Lake,Lake,1451.0,3.0,4.5,10.0,Yes,,Recreational,Yes,0.3,Afternoon,High,Low (<=50),Good,4.090909090909091,0.462,False
+78,Western,Gujarat,Ahmedabad,Science City,Science,2002.0,7.0,4.4,500.0,Yes,Monday,Educational,Yes,0.11,All,Medium,High (201-1000),Good,0.7333333333333334,0.435,False
+79,Northern,Rajasthan,Jaipur,Hawa Mahal,Palace,1799.0,1.0,4.4,50.0,Yes,,Architectural,Yes,1.3,Morning,Very High,Low (<=50),Good,2.9333333333333336,0.516,False
+80,Northern,Rajasthan,Udaipur,City Palace,Palace,1559.0,2.0,4.4,300.0,Yes,,Historical,Yes,0.51,All,Very High,High (201-1000),Good,1.1,0.462,False
+81,Northern,Rajasthan,Jaisalmer,Jaisalmer Fort,Fort,1156.0,2.5,4.4,50.0,No,,Historical,Yes,0.56,All,Very High,Low (<=50),Good,2.9333333333333336,0.466,False
+82,Northern,Rajasthan,Sawai Madhopur,Ranthambore National Park,Wildlife Sanctuary,1980.0,3.0,4.6,500.0,No,,Wildlife,Yes,0.09,All,Medium,High (201-1000),Excellent,0.7666666666666666,0.463,False
+83,Northern,Rajasthan,Pushkar,Pushkar Lake,Temple,1400.0,1.5,4.4,0.0,No,,Religious,Yes,1.6,All,Very High,Free,Good,4.4,0.536,False
+84,Northern,Rajasthan,Ajmer,Ajmer Sharif Dargah,Shrine,1236.0,1.0,4.6,0.0,Yes,,Religious,No,0.35,All,High,Free,Excellent,4.6,0.48,False
+85,Northern,Rajasthan,Jodhpur,Mehrangarh Fort,Fort,1459.0,2.0,4.6,100.0,Yes,,Historical,Yes,0.64,All,Very High,Moderate (51-200),Excellent,2.3,0.5,False
+86,Northern,Rajasthan,Chittorgarh,Chittorgarh Fort,Fort,700.0,2.0,4.6,40.0,No,,Historical,Yes,1.9,All,Very High,Low (<=50),Excellent,3.2857142857142856,0.585,False
+87,Northern,Rajasthan,Mount Abu,Dilwara Temples,Temple,1100.0,1.0,4.6,0.0,No,,Religious,No,0.05,All,Low,Free,Excellent,4.6,0.46,False
+88,Northern,Rajasthan,Bikaner,Junagarh Fort,Fort,1589.0,2.0,4.5,50.0,Yes,,Historical,Yes,0.32,All,High,Low (<=50),Good,3.0,0.464,False
+89,Northern,Rajasthan,Jaipur,Amber Fort,Fort,1592.0,2.0,4.6,100.0,Yes,,Historical,Yes,1.5,All,Very High,Moderate (51-200),Excellent,2.3,0.558,False
+90,Northern,Rajasthan,Jaipur,Jaigarh Fort,Fort,1726.0,1.5,4.5,35.0,Yes,,Historical,Yes,0.3,All,High,Low (<=50),Good,3.333333333333333,0.462,False
+91,Northern,Rajasthan,Udaipur,Lake Pichola,Lake,1362.0,1.0,4.6,0.0,Yes,,Nature,Yes,0.5,All,Very High,Free,Excellent,4.6,0.49,False
+92,Northern,Punjab,Amritsar,Golden Temple (Harmandir Sahib),Religious Site,1604.0,1.5,4.9,0.0,Yes,,Spiritual,Yes,1.9,All,Very High,Free,Excellent,4.9,0.628,False
+93,Northern,Punjab,Amritsar,Jallianwala Bagh,Memorial,1951.0,1.0,4.8,0.0,Yes,,Historical,Yes,0.3,Afternoon,High,Free,Excellent,4.8,0.505,False
+94,Northern,Punjab,Amritsar,Wagah Border,Border Crossing,1950.0,2.0,4.8,0.0,Yes,,Cultural,Yes,0.17,Evening,Medium,Free,Excellent,4.8,0.497,False
+95,Northern,Punjab,Chandigarh,Rock Garden,Sculpture Garden,1976.0,2.0,4.5,30.0,Yes,,Artistic,Yes,0.5,All,Very High,Low (<=50),Good,3.4615384615384612,0.476,False
+96,Southern,Kerala,Alappuzha,Alappuzha Beach,Beach,,1.5,4.5,0.0,Yes,,Recreational,Yes,0.11,All,Medium,Free,Good,4.5,0.45,False
+97,Southern,Kerala,Munnar,Munnar Tea Gardens,Scenic Area,,2.0,4.3,0.0,No,,Nature,Yes,0.3,All,High,Free,Good,4.3,0.434,False
+98,Southern,Kerala,Kochi,Fort Kochi,Site,1503.0,1.0,4.4,0.0,Yes,,Historical,Yes,0.1,All,Medium,Free,Good,4.4,0.435,False
+99,Southern,Kerala,Thiruvananthapuram,Padmanabhaswamy Temple,Temple,,1.0,4.7,0.0,Yes,,Religious,No,0.46,All,High,Free,Excellent,4.7,0.502,False
+100,Southern,Kerala,Kozhikode,Kozhikode Beach,Beach,,1.5,3.9,0.0,Yes,,Recreational,Yes,0.059,All,Low,Free,Average,3.9,0.36,False
+101,Southern,Kerala,Wayanad,Wayanad Wildlife Sanctuary,Wildlife Sanctuary,,3.0,4.5,300.0,No,,Wildlife,Yes,2.2,All,Very High,High (201-1000),Good,1.125,0.591,False
+102,Southern,Kerala,Thekkady,Periyar National Park,National Park,1982.0,3.0,4.3,50.0,No,,Wildlife,Yes,0.14,All,Medium,Low (<=50),Good,2.8666666666666667,0.423,False
+103,Southern,Kerala,Kumarakom,Kumarakom Bird Sanctuary,Bird Sanctuary,1972.0,2.0,3.8,50.0,Yes,,Wildlife,Yes,0.1,All,Medium,Low (<=50),Average,2.533333333333333,0.349,False
+104,Southern,Kerala,Varkala,Varkala Beach,Beach,,2.0,4.6,0.0,Yes,,Recreational,Yes,0.1,All,Medium,Free,Excellent,4.6,0.463,False
+105,Southern,Kerala,Bekal,Bekal Fort,Fort,1650.0,1.5,4.5,20.0,No,,Historical,Yes,0.22,All,High,Low (<=50),Good,3.75,0.457,False
+106,Southern,Kerala,Kovalam,Kovalam Beach,Beach,,2.0,4.4,0.0,Yes,,Recreational,Yes,0.68,All,Very High,Free,Good,4.4,0.474,False
+107,Southern,Kerala,Kannur,St. Angelo Fort,Fort,1505.0,1.0,4.4,20.0,Yes,,Historical,Yes,0.11,All,Medium,Low (<=50),Good,3.666666666666667,0.435,False
+108,Southern,Kerala,Nelliyampathy,Seethargundu Viewpoint,Viewpoint,,1.0,4.5,0.0,No,,Nature,Yes,0.03,Morning,Low,Free,Good,4.5,0.444,False
+109,Southern,Kerala,Kochi,Kerala Folklore Museum,Cultural,2009.0,1.5,4.4,100.0,Yes,Monday,Cultural,Yes,0.1,All,Medium,Moderate (51-200),Good,2.2,0.435,False
+110,Southern,Kerala,Kochi,Wonderla Amusement Park,Amusement Park,2016.0,5.5,4.6,750.0,Yes,,Entertainment,Yes,0.41,All,High,High (201-1000),Excellent,0.5411764705882353,0.484,False
+111,Southern,Karnataka,Mysore,Mysore Palace,Palace,1912.0,2.0,4.6,50.0,Yes,,Historical,Yes,2.5,All,Very High,Low (<=50),Excellent,3.0666666666666664,0.626,False
+112,Southern,Karnataka,Hampi,Hampi Archaeological Ruins,Site,,3.0,4.7,0.0,No,,Historical,Yes,0.05,All,Low,Free,Excellent,4.7,0.474,False
+113,Southern,Karnataka,Coorg,Abbey Falls,Waterfall,,1.0,4.1,0.0,No,,Nature,Yes,0.03,Morning,Low,Free,Good,4.1,0.387,False
+114,Southern,Karnataka,Gokarna,Om Beach,Beach,,2.0,4.5,0.0,No,,Nature,Yes,0.09,All,Medium,Free,Good,4.5,0.448,False
+115,Southern,Karnataka,Chikmagalur,Mullayanagiri,Mountain Peak,,3.0,4.5,0.0,No,,Nature,Yes,0.05,All,Low,Free,Good,4.5,0.446,False
+116,Southern,Karnataka,Badami,Badami Cave Temples,Cave,600.0,1.5,4.6,30.0,No,,Religious,No,0.2,All,High,Low (<=50),Excellent,3.538461538461538,0.47,False
+117,Southern,Karnataka,Shivamogga,Jog Falls,Waterfall,1900.0,1.5,4.6,30.0,No,,Nature,Yes,0.23,Morning,High,Low (<=50),Excellent,3.538461538461538,0.472,False
+118,Southern,Karnataka,Mangalore,Panambur Beach,Beach,,1.5,4.5,0.0,Yes,,Recreational,Yes,0.1,All,Medium,Free,Good,4.5,0.449,False
+119,Southern,Karnataka,Murudeshwar,Murudeshwar Temple,Temple,,1.0,4.7,0.0,Yes,,Religious,No,0.49,All,High,Free,Excellent,4.7,0.504,False
+120,Southern,Karnataka,Bijapur,Gol Gumbaz,Mausoleum,1656.0,1.5,4.5,20.0,No,,Historical,Yes,0.25,All,High,Low (<=50),Good,3.75,0.459,False
+121,Southern,Karnataka,Bandipur,Bandipur National Park,National Park,1974.0,3.0,4.4,300.0,No,,Wildlife,Yes,0.15,Morning,Medium,High (201-1000),Good,1.1,0.438,False
+122,Southern,Karnataka,Halebidu,Halebidu Hoysaleswara Temple,Temple,1121.0,1.0,4.7,15.0,No,,Religious,No,0.11,All,Medium,Low (<=50),Excellent,4.086956521739131,0.478,False
+123,Western,Maharastra,Pune,Shaniwar Wada,Fort,1732.0,2.0,4.4,50.0,Yes,,Historical,Yes,1.2,All,Very High,Low (<=50),Good,2.9333333333333336,0.509,False
+124,Western,Maharastra,Aurangabad,Ajanta Caves,Cave,200.0,3.0,4.6,30.0,Yes,Monday,Historical,Yes,0.21,Afternoon,High,Low (<=50),Excellent,3.538461538461538,0.471,False
+125,Western,Maharastra,Nashik,Sula Vineyards,Vineyard,1999.0,2.0,4.1,300.0,Yes,,Recreational,Yes,0.1,Afternoon,Medium,High (201-1000),Good,1.025,0.392,False
+126,Western,Maharastra,Shirdi,Sai Baba Temple,Temple,1922.0,1.5,4.7,0.0,Yes,,Religious,No,0.69,All,Very High,Free,Excellent,4.7,0.517,False
+127,Western,Maharastra,Alibaug,Alibaug Beach,Beach,,1.5,4.2,0.0,Yes,,Recreational,Yes,0.05,Evening,Low,Free,Good,4.2,0.403,False
+128,Western,Maharastra,Ratnagiri,Ganapatipule Temple,Temple,1600.0,1.0,4.7,0.0,No,,Religious,No,0.1,All,Medium,Free,Excellent,4.7,0.478,False
+129,Western,Maharastra,Nagpur,Deekshabhoomi,Monument,2001.0,1.0,4.5,0.0,Yes,,Religious,Yes,0.11,Afternoon,Medium,Free,Good,4.5,0.45,False
+130,Western,Maharastra,Kolhapur,Mahalakshmi Temple,Temple,700.0,1.0,4.8,0.0,Yes,,Religious,No,0.9,All,Very High,Free,Excellent,4.8,0.546,False
+131,Western,Maharastra,Lonavala,Karla Caves,Cave,200.0,1.5,4.4,25.0,Yes,Yes,Historical,Yes,0.27,Afternoon,High,Low (<=50),Good,3.5200000000000005,0.446,False
+132,Western,Maharashtra,Tarkarli,Tarkarli Beach,Beach,,2.0,4.6,0.0,No,,Recreational,Yes,0.065,Evening,Medium,Free,Excellent,4.6,0.461,False
+133,Western,Maharashtra,Satara,Kaas Plateau,Valley,,2.0,4.4,300.0,No,,Nature,Yes,0.05,Afternoon,Low,High (201-1000),Good,1.1,0.431,False
+134,Western,Maharashtra,Matheran,Echo Point,Viewpoint,1828.0,1.5,4.4,0.0,Yes,,Nature,Yes,0.02,Morning,Low,Free,Good,4.4,0.429,False
+135,Western,Maharashtra,Ajanta,Ellora Caves,Cave,600.0,3.0,4.7,30.0,Yes,Tuesday,Historical,Yes,0.49,Afternoon,High,Low (<=50),Excellent,3.6153846153846154,0.504,False
+136,Central,Madhya Pradesh,Khajuraho,Khajuraho Group of Monuments,Temples,,2.0,4.7,40.0,No,,Cultural,Yes,0.09,Afternoon,Medium,Low (<=50),Excellent,3.3571428571428577,0.477,False
+137,Central,Madhya Pradesh,Bhopal,Sanchi Stupa,Monument,,1.5,4.7,30.0,Yes,,Historical,Yes,0.01,Afternoon,Low,Low (<=50),Excellent,3.6153846153846154,0.471,False
+138,Central,Madhya Pradesh,Indore,Rajwada Palace,Palace,1747.0,1.0,4.4,10.0,Yes,,Historical,Yes,0.63,Afternoon,Very High,Low (<=50),Good,4.0,0.471,False
+139,Central,Madhya Pradesh,Gwalior,Gwalior Fort,Fort,900.0,2.5,4.5,75.0,Yes,,Historical,Yes,0.4,Morning,High,Moderate (51-200),Good,2.5714285714285716,0.469,False
+140,Central,Madhya Pradesh,Ujjain,Mahakaleshwar Jyotirlinga,Temple,,1.5,4.8,0.0,Yes,,Religious,No,1.2,All,Very High,Free,Excellent,4.8,0.566,False
+141,Central,Madhya Pradesh,Jabalpur,Dhuandhar Falls,Waterfall,,1.0,4.5,0.0,No,,Nature,Yes,0.01,Morning,Low,Free,Good,4.5,0.443,False
+142,Central,Madhya Pradesh,Pachmarhi,Bee Falls,Waterfall,,1.5,4.6,15.0,No,,Nature,Yes,0.065,Morning,Medium,Low (<=50),Excellent,4.0,0.461,False
+143,Central,Madhya Pradesh,Kanha,Kanha National Park,Wildlife Sanctuary,1955.0,3.0,4.5,100.0,No,,Wildlife,Yes,0.1,Morning,Medium,Moderate (51-200),Good,2.25,0.449,False
+144,Central,Madhya Pradesh,Bandhavgarh,Bandhavgarh National Park,National Park,1968.0,3.0,4.5,50.0,No,,Wildlife,Yes,0.05,Morning,Low,Low (<=50),Good,3.0,0.446,False
+145,Central,Madhya Pradesh,Orchha,Orchha Fort,Fort,1500.0,1.5,4.8,10.0,No,,Historical,Yes,0.1,Afternoon,Medium,Low (<=50),Excellent,4.363636363636363,0.492,False
+146,Central,Madhya Pradesh,Mandu,Jahaz Mahal,Site,1500.0,1.0,3.9,50.0,No,,Historical,Yes,0.03,Afternoon,Low,Low (<=50),Average,2.6,0.358,False
+147,Central,Madhya Pradesh,Bhimbetka,Bhimbetka Rock Shelters,Prehistoric Site,1958.0,2.0,4.6,25.0,No,,Archaeological,Yes,0.07,Afternoon,Medium,Low (<=50),Excellent,3.6799999999999997,0.461,False
+148,Central,Madhya Pradesh,Amarkantak,Narmada Udgam Temple,Temple,1200.0,1.0,4.4,0.0,No,,Religious,Yes,0.01,All,Low,Free,Good,4.4,0.429,False
+149,Central,Madhya Pradesh,Chitrakoot,Chitrakoot Falls,Waterfall,,1.5,4.4,0.0,No,,Nature,Yes,0.1,Morning,Medium,Free,Good,4.4,0.435,False
+150,Northern,Himachal Pradesh,Shimla,The Ridge,Scenic Point,,1.0,4.7,0.0,Yes,,Recreational,Yes,0.03,Morning,Low,Free,Excellent,4.7,0.473,False
+151,Northern,Himachal Pradesh,Manali,Solang Valley,Valley,,2.0,4.1,0.0,No,,Adventure,Yes,0.05,Morning,Low,Free,Good,4.1,0.388,False
+152,Northern,Himachal Pradesh,Dalhousie,Dalai Lama Temple,Temple,1959.0,1.5,4.7,0.0,Yes,,Religious,No,0.15,All,Medium,Free,Excellent,4.7,0.481,False
+153,Northern,Himachal Pradesh,Dalhousie,Khajjiar Lake,Lake,,1.5,4.5,0.0,No,,Nature,Yes,0.1,Morning,Medium,Free,Good,4.5,0.449,False
+154,Northern,Himachal Pradesh,Spiti Valley,Key Monastery,Monastery,1100.0,1.0,4.8,0.0,No,,Religious,Yes,0.025,Morning,Low,Free,Excellent,4.8,0.487,False
+155,Northern,Himachal Pradesh,Kullu,Great Himalayan National Park,National Park,1984.0,3.0,4.5,50.0,No,,Wildlife,Yes,0.2,All,High,Low (<=50),Good,3.0,0.456,False
+156,Northern,Himachal Pradesh,Chamba,Chamera Lake,Lake,,2.0,4.4,0.0,No,,Recreational,Yes,0.01,Morning,Low,Free,Good,4.4,0.429,False
+157,Northern,Himachal Pradesh,Kinnaur,Sangla Valley,Valley,,2.0,4.5,0.0,No,,Nature,Yes,0.01,Morning,Low,Free,Good,4.5,0.443,False
+158,Northern,Himachal Pradesh,Kangra,Kangra Fort,Fort,400.0,2.0,4.4,150.0,Yes,,Historical,Yes,0.1,All,Medium,Moderate (51-200),Good,1.7600000000000002,0.435,False
+159,Northern,Himachal Pradesh,Palampur,Tea Gardens,Tea Plantation,1950.0,1.5,4.6,0.0,Yes,,Agricultural,Yes,0.015,Morning,Low,Free,Excellent,4.6,0.457,False
+160,Northern,Himachal Pradesh,Mandi,Prashar Lake,Lake,1400.0,1.5,4.6,0.0,No,,Nature,Yes,0.01,Morning,Low,Free,Excellent,4.6,0.457,False
+161,Northern,Himachal Pradesh,Bir Billing,Paragliding Site,Adventure Sport,2005.0,2.0,4.8,2500.0,No,,Adventure,Yes,0.01,All,Low,Premium (1000+),Excellent,0.1846153846153846,0.486,False
+162,Northern,Himachal Pradesh,Mcleod Ganj,Triund Trek,Trekking,,5.0,4.8,0.0,Yes,,Adventure,Yes,0.01,Morning,Low,Free,Excellent,4.8,0.486,False
+163,Northern,Himachal Pradesh,Manikaran,Manikaran Sahib,Gurudwara,1980.0,1.0,4.6,0.0,No,,Religious,Yes,1.3,Morning,Very High,Free,Excellent,4.6,0.544,False
+164,Northern,Himachal Pradesh,Narkanda,Hatu Peak,Viewpoint,,2.0,4.5,0.0,Yes,,Nature,Yes,1.1,All,Very High,Free,Good,4.5,0.517,False
+165,Northern,Himachal Pradesh,Barot,Barot Valley,Valley,,2.0,4.7,0.0,No,,Nature,Yes,1.2,Morning,Very High,Free,Excellent,4.7,0.552,False
+166,Northern,Himachal Pradesh,Shoja,Serolsar Lake,Lake,,2.5,4.4,0.0,No,,Nature,Yes,0.9,Morning,Very High,Free,Good,4.4,0.489,False
+167,Northern,Himachal Pradesh,Kufri,Kufri Fun World,Ski Resort,1975.0,5.0,3.8,1500.0,Yes,,Recreational,Yes,0.1,All,Medium,Premium (1000+),Average,0.2375,0.349,False
+168,Northern,Uttarakhand,Nainital,Naini Lake,Lake,,1.5,4.2,0.0,Yes,,Nature,Yes,0.01,Morning,Low,Free,Good,4.2,0.4,False
+169,Northern,Uttarakhand,Rishikesh,Laxman Jhula,Suspension Bridge,1939.0,1.0,4.4,0.0,Yes,,Cultural,Yes,0.03,Morning,Low,Free,Good,4.4,0.43,False
+170,Northern,Uttarakhand,Haridwar,Har Ki Pauri,Ghat,,1.0,4.5,0.0,Yes,,Religious,Yes,0.025,All,Low,Free,Good,4.5,0.444,False
+171,Northern,Uttarakhand,Dehradun,Robber's Cave,Cave,,1.5,4.5,25.0,Yes,,Nature,Yes,0.01,Morning,Low,Low (<=50),Good,3.6,0.443,False
+172,Northern,Uttarakhand,Mussoorie,Kempty Falls,Waterfall,,1.5,4.2,15.0,Yes,,Nature,Yes,0.55,Morning,Very High,Low (<=50),Good,3.6521739130434785,0.437,False
+173,Northern,Uttarakhand,Auli,Auli Ski Resort,Ski Resort,1990.0,3.0,4.5,0.0,No,,Adventure,Yes,0.01,Morning,Low,Free,Good,4.5,0.443,False
+174,Northern,Uttarakhand,Badrinath,Badrinath Temple,Temple,,1.0,4.8,0.0,No,,Religious,No,0.29,All,High,Free,Excellent,4.8,0.505,False
+175,Northern,Uttarakhand,Almora,Binsar Wildlife Sanctuary,Wildlife Sanctuary,1988.0,2.0,4.3,150.0,No,,Wildlife,Yes,0.01,All,Low,Moderate (51-200),Good,1.72,0.414,False
+176,Northern,Uttarakhand,Ranikhet,Chaubatia Gardens,Orchard,1868.0,1.0,4.0,50.0,No,,Recreational,Yes,0.025,All,Low,Low (<=50),Average,2.6666666666666665,0.372,False
+177,Northern,Uttarakhand,Jim Corbett,Jim Corbett National Park,National Park,1936.0,3.0,4.4,100.0,Yes,,Wildlife,Yes,0.3,All,High,Moderate (51-200),Good,2.2,0.448,False
+178,Northern,Uttarakhand,Uttarkashi,Gangotri Temple,Temple,1751.0,1.0,4.8,0.0,No,,Religious,No,0.05,All,Low,Free,Excellent,4.8,0.488,False
+179,Northern,Uttarakhand,Chopta,Tungnath Temple,Temple,751.0,2.0,4.8,0.0,No,,Religious,No,0.09,All,Medium,Free,Excellent,4.8,0.491,False
+180,Northern,Uttarakhand,Joshimath,Valley of Flowers,National Park,1982.0,5.0,4.7,150.0,No,,Nature,Yes,0.035,Morning,Low,Moderate (51-200),Excellent,1.8800000000000001,0.473,False
+181,Central,Uttar Pradesh,Agra,Taj Mahal,Mausoleum,1632.0,2.0,4.6,50.0,Yes,Friday,Historical,Yes,2.25,Morning,Very High,Low (<=50),Excellent,3.0666666666666664,0.609,False
+182,Central,Uttar Pradesh,Varanasi,Kashi Vishwanath Temple,Temple,,1.0,4.7,0.0,Yes,,Religious,No,0.9,All,Very High,Free,Excellent,4.7,0.532,False
+183,Central,Uttar Pradesh,Lucknow,Bara Imambara,Monument,1784.0,1.5,4.4,50.0,Yes,Monday,Historical,No,0.45,All,High,Low (<=50),Good,2.9333333333333336,0.458,False
+184,Central,Uttar Pradesh,Mathura,Krishna Janmabhoomi,Temple,,1.0,4.7,0.0,Yes,,Religious,No,0.13,All,Medium,Free,Excellent,4.7,0.48,False
+185,Central,Uttar Pradesh,Ayodhya,Ram Janmabhoomi,Religious Site,,1.0,4.8,0.0,Yes,,Religious,No,0.025,All,Low,Free,Excellent,4.8,0.487,False
+186,Central,Uttar Pradesh,Vrindavan,Banke Bihari Temple,Temple,1864.0,1.0,4.8,0.0,Yes,,Religious,No,0.37,All,High,Free,Excellent,4.8,0.51,False
+187,Central,Uttar Pradesh,Allahabad,Triveni Sangam,Confluence,,1.0,4.5,0.0,Yes,,Religious,Yes,0.09,Morning,Medium,Free,Good,4.5,0.448,False
+188,Central,Uttar Pradesh,Jhansi,Jhansi Fort,Fort,1613.0,1.5,4.4,15.0,Yes,,Historical,Yes,0.25,All,High,Low (<=50),Good,3.8260869565217397,0.445,False
+189,Central,Uttar Pradesh,Sarnath,Dhamek Stupa,Monument,,1.0,4.6,5.0,Yes,,Historical,Yes,0.065,All,Medium,Low (<=50),Excellent,4.3809523809523805,0.461,False
+190,Central,Uttar Pradesh,Fatehpur Sikri,Buland Darwaza,Monument,1571.0,2.0,4.4,40.0,Yes,,Historical,Yes,0.07,Afternoon,Medium,Low (<=50),Good,3.1428571428571432,0.433,False
+191,Central,Uttar Pradesh,Noida,Okhla Bird Sanctuary,Bird Sanctuary,1990.0,1.5,4.3,30.0,Yes,,Wildlife,Yes,0.035,All,Low,Low (<=50),Good,3.3076923076923075,0.416,False
+192,Central,Uttar Pradesh,Aligarh,Aligarh Fort,Fort,1524.0,1.0,4.1,20.0,Yes,,Historical,Yes,0.0165,Afternoon,Low,Low (<=50),Good,3.4166666666666665,0.386,False
+193,Central,Uttar Pradesh,Meerut,Augarnath Temple,Temple,,1.0,4.8,0.0,Yes,,Religious,No,0.045,All,Low,Free,Excellent,4.8,0.488,False
+194,Central,Uttar Pradesh,Kanpur,Allen Forest Zoo,Zoo,1971.0,2.0,4.2,150.0,Yes,Monday,Wildlife,Yes,0.21,All,High,Moderate (51-200),Good,1.6800000000000002,0.414,False
+195,Northern,Jammu And Kashmir,Srinagar,Dal Lake,Lake,,2.0,4.6,0.0,Yes,,Nature,Yes,0.15,Morning,Medium,Free,Excellent,4.6,0.467,False
+196,Northern,Ladakh,Leh,Pangong Tso,Lake,,2.0,4.9,20.0,Yes,,Nature,Yes,0.15,Morning,Medium,Low (<=50),Excellent,4.083333333333334,0.509,False
+197,Northern,Jammu And Kashmir,Pahalgam,Betaab Valley,Valley,,2.0,4.6,100.0,No,,Nature,Yes,0.11,All,Medium,Moderate (51-200),Excellent,2.3,0.464,False
+198,Northern,Jammu And Kashmir,Jammu,Vaishno Devi,Temple,,5.0,4.7,0.0,Yes,,Religious,No,0.55,All,Very High,Free,Excellent,4.7,0.508,False
+199,Northern,Jammu And Kashmir,Udhampur,Patnitop Height,Hill,,2.0,4.1,0.0,No,,Recreational,Yes,0.01,All,Low,Free,Good,4.1,0.386,False
+200,Northern,Jammu And Kashmir,Anantnag,Amarnath Cave,Temple,,6.0,4.5,0.0,No,,Religious,Yes,0.11,All,Medium,Free,Good,4.5,0.45,False
+201,Northern,Ladakh,Leh,Thiksey Monastery,Monastery,1430.0,1.5,4.7,20.0,Yes,,Religious,No,0.05,All,Low,Low (<=50),Excellent,3.916666666666667,0.474,False
+202,Northern,Ladakh,Nubra Valley,Nubra Valley,Valley,,2.0,4.5,0.0,No,,Nature,Yes,0.1,All,Medium,Free,Good,4.5,0.449,False
+203,Northern,Ladakh,Kargil,Kargil War Memorial,War Memorial,24.0,1.0,4.8,0.0,No,,Historical,Yes,0.011,All,Low,Free,Excellent,4.8,0.486,False
+204,Northern,Ladakh,Diskit,Diskit Monastery,Monastery,1351.0,1.0,4.7,20.0,No,,Religious,No,0.015,Morning,Low,Low (<=50),Excellent,3.916666666666667,0.472,False
+205,Northern,Jammu And Kashmir,Kishtwar,Kishtwar National Park,National Park,1981.0,3.0,4.3,100.0,No,,Wildlife,Yes,0.01,All,Low,Moderate (51-200),Good,2.15,0.414,False
+206,Northern,Ladakh,Hemis,Hemis National Park,National Park,1981.0,4.0,4.4,20.0,No,,Wildlife,Yes,0.02,All,Low,Low (<=50),Good,3.666666666666667,0.429,False
+207,Northern,Ladakh,Dras,Dras War Memorial,War Memorial,,1.0,4.8,0.0,No,,Historical,Yes,0.012,All,Low,Free,Excellent,4.8,0.486,False
+208,Northern,Ladakh,Leh,Magnetic Hill,Gravity Hill,,0.5,3.7,0.0,Yes,,Nature,Yes,0.1,All,Medium,Free,Average,3.7,0.335,False
+209,Northern,Ladakh,Leh,Khardung La Pass,Hill,,1.0,4.5,0.0,Yes,,Adventure,Yes,0.05,Afternoon,Low,Free,Good,4.5,0.446,False
+211,Central,Uttar Pradesh,Vrindavan,Prem Mandir,Temple,2012.0,1.5,4.8,0.0,Yes,,Religious,Yes,0.49,Evening,High,Free,Excellent,4.8,0.518,False
+212,Central,Uttar Pradesh,Porbandar,Kirti Mandir,Memorial,1950.0,1.0,4.8,0.0,Yes,,Historical,Yes,0.03,Morning,Low,Free,Excellent,4.8,0.487,False
+213,Central,Uttar Pradesh,Mathura,Nand Gaon,Village,,1.0,4.1,0.0,Yes,,Cultural,Yes,0.01,Morning,Low,Free,Good,4.1,0.386,False
+214,Central,Uttar Pradesh,Mathura,Barsana Mandir,Temple,,1.0,4.8,0.0,Yes,,Religious,Yes,0.1,Morning,Medium,Free,Excellent,4.8,0.492,False
+215,Eastern,West Bengal,Darjeeling,Tiger Hill,Sunrise Point,,1.0,4.5,0.0,No,,Nature,Yes,0.025,All,Low,Free,Good,4.5,0.444,False
+216,Eastern,West Bengal,Siliguri,Jaldapara National Park,Wildlife Sanctuary,1941.0,3.0,4.4,250.0,Yes,,Wildlife,Yes,0.035,All,Low,High (201-1000),Good,1.2571428571428573,0.43,False
+217,Eastern,West Bengal,Sundarbans,Sundarbans National Park,National Park,1984.0,4.0,4.4,60.0,No,,Wildlife,Yes,0.065,All,Medium,Moderate (51-200),Good,2.75,0.432,False
+218,Eastern,West Bengal,Digha,Digha Beach,Beach,,1.5,4.5,0.0,No,,Recreational,Yes,0.09,Morning,Medium,Free,Good,4.5,0.448,False
+219,Eastern,West Bengal,Murshidabad,Hazarduari Palace,Palace,1837.0,1.5,4.5,10.0,Yes,Friday,Historical,Yes,0.18,Morning,High,Low (<=50),Good,4.090909090909091,0.454,False
+220,Eastern,West Bengal,Bolpur,Kankalitala Temple,Temple,,0.5,4.7,0.0,Yes,,Religious,No,0.045,All,Low,Free,Excellent,4.7,0.474,False
+221,Eastern,West Bengal,Hooghly,Hangseswari Temple,Temple,1814.0,0.5,4.6,0.0,Yes,,Architectural,No,0.07,All,Medium,Free,Excellent,4.6,0.461,False
+222,Eastern,West Bengal,Jalpaiguri,Gorumara National Park,National Park,1949.0,3.0,4.4,100.0,Yes,,Wildlife,Yes,0.07,All,Medium,Moderate (51-200),Good,2.2,0.433,False
+223,Eastern,West Bengal,Cooch Behar,Cooch Behar Palace,Palace,1887.0,1.0,4.5,20.0,Yes,Friday,Historical,Yes,0.09,All,Medium,Low (<=50),Good,3.75,0.448,False
+224,Eastern,West Bengal,Purulia,Ayodhya Hills,Hill,,2.5,4.5,0.0,No,,Nature,Yes,0.15,All,Medium,Free,Good,4.5,0.452,False
+225,Eastern,Odisha,Puri,Jagannath Temple,Temple,,2.0,4.7,0.0,Yes,,Religious,No,1.0,All,Very High,Free,Excellent,4.7,0.538,False
+226,Eastern,Odisha,Konark,Sun Temple,Temple,1250.0,1.5,4.7,40.0,Yes,,Historical,Yes,0.83,All,Very High,Low (<=50),Excellent,3.3571428571428577,0.527,False
+227,Eastern,Odisha,Bhubaneswar,Lingaraj Temple,Temple,,1.0,4.6,0.0,Yes,,Religious,No,0.35,All,High,Free,Excellent,4.6,0.48,False
+228,Eastern,Odisha,Rourkela,Khandadhar Waterfall,Waterfall,,1.5,4.5,0.0,No,,Nature,Yes,1.2,All,Very High,Free,Good,4.5,0.523,False
+229,Eastern,Odisha,Cuttack,Barabati Fort,Fort,,1.0,4.5,0.0,Yes,,Historical,Yes,0.13,All,Medium,Free,Good,4.5,0.451,False
+230,Eastern,Odisha,Sambalpur,Hirakud Dam,Dam,1957.0,1.0,4.5,0.0,No,,Engineering Marvel,Yes,0.01,All,Low,Free,Good,4.5,0.443,False
+231,Eastern,Odisha,Chilika,Chilika Lake,Lake,,2.0,3.9,0.0,Yes,,Nature,Yes,0.1,Morning,Medium,Free,Average,3.9,0.363,False
+232,Eastern,Odisha,Berhampur,Tara Tarini Temple,Temple,,1.0,4.6,0.0,Yes,,Religious,No,0.01,All,Low,Free,Excellent,4.6,0.457,False
+233,Eastern,Odisha,Keonjhar,Badaghagara Waterfall,Waterfall,,1.0,4.3,0.0,No,,Nature,Yes,0.018,Morning,Low,Free,Good,4.3,0.415,False
+234,Eastern,Odisha,Balasore,Chandipur Beach,Beach,,1.5,4.2,0.0,Yes,,Recreational,Yes,0.014,Morning,Low,Free,Good,4.2,0.4,False
+235,Eastern,Odisha,Kendujhar,Sanaghagara Waterfall,Waterfall,,1.0,4.4,0.0,No,,Nature,Yes,0.055,All,Low,Free,Good,4.4,0.432,False
+236,Southern,Tamil Nadu,Chennai,Marina Beach,Beach,,1.5,3.9,0.0,Yes,,Recreational,Yes,0.1,Morning,Medium,Free,Average,3.9,0.363,False
+237,Southern,Tamil Nadu,Madurai,Meenakshi Amman Temple,Temple,,2.0,4.7,0.0,Yes,,Religious,No,0.65,All,Very High,Free,Excellent,4.7,0.515,False
+238,Southern,Tamil Nadu,Rameswaram,Ramanathaswamy Temple,Temple,,1.5,4.6,0.0,No,,Religious,No,0.01,All,Low,Free,Excellent,4.6,0.457,False
+239,Southern,Tamil Nadu,Kanyakumari,Vivekananda Rock Memorial,Memorial,1970.0,1.0,4.6,20.0,Yes,,Historical,No,0.47,Morning,High,Low (<=50),Excellent,3.833333333333333,0.488,False
+240,Southern,Tamil Nadu,Ooty,Ooty Lake,Lake,1824.0,1.0,4.1,10.0,Yes,,Recreational,Yes,0.61,Morning,Very High,Low (<=50),Good,3.7272727272727266,0.426,False
+241,Southern,Tamil Nadu,Coimbatore,Marudamalai Temple,Temple,,1.0,4.7,0.0,Yes,,Religious,No,0.3,All,High,Free,Excellent,4.7,0.491,False
+242,Southern,Tamil Nadu,Kodaikanal,Kodaikanal Lake,Lake,1863.0,2.0,3.9,0.0,No,,Recreational,Yes,0.1,Morning,Medium,Free,Average,3.9,0.363,False
+243,Southern,Tamil Nadu,Thanjavur,Brihadeeswarar Temple,Temple,110.0,1.5,4.8,0.0,Yes,,Religious,No,0.35,All,High,Free,Excellent,4.8,0.509,False
+244,Southern,Tamil Nadu,Mahabalipuram,Shore Temple,Temple,,1.0,4.6,40.0,Yes,,Historical,No,0.09,All,Medium,Low (<=50),Excellent,3.2857142857142856,0.463,False
+245,Southern,Tamil Nadu,Yercaud,Yercaud Lake,Lake,,1.0,4.2,0.0,No,,Recreational,Yes,0.019,Morning,Low,Free,Good,4.2,0.401,False
+246,Southern,Tamil Nadu,Tirunelveli,Nellaiappar Temple,Temple,,1.0,4.6,0.0,Yes,,Religious,No,0.16,All,Medium,Free,Excellent,4.6,0.467,False
+247,Southern,Tamil Nadu,Chidambaram,Nataraja Temple,Temple,,1.0,4.7,0.0,Yes,,Religious,No,0.28,All,High,Free,Excellent,4.7,0.49,False
+248,Southern,Andhra Pradesh,Vijayawada,Kanaka Durga Temple,Temple,,1.0,4.7,0.0,Yes,,Religious,No,0.44,All,High,Free,Excellent,4.7,0.501,False
+249,Southern,Andhra Pradesh,Visakhapatnam,Rishikonda Beach,Beach,,1.5,4.5,0.0,Yes,,Recreational,Yes,0.39,Morning,High,Free,Good,4.5,0.469,False
+250,Southern,Andhra Pradesh,Srisailam,Mallikarjuna Swamy Temple,Temple,,1.0,4.7,0.0,No,,Religious,No,0.49,All,High,Free,Excellent,4.7,0.504,False
+251,Southern,Andhra Pradesh,Rajahmundry,Papikondalu,Hill,,2.0,4.3,0.0,Yes,,Nature,Yes,0.032,All,Low,Free,Good,4.3,0.416,False
+252,Southern,Andhra Pradesh,Anantapur,Lepakshi,Site,,1.5,4.6,0.0,No,,Historical,Yes,0.075,All,Medium,Free,Excellent,4.6,0.462,False
+253,Southern,Andhra Pradesh,Kurnool,Belum Caves,Cave,,1.5,4.4,65.0,Yes,,Natural Wonder,Yes,0.11,Afternoon,Medium,Moderate (51-200),Good,2.666666666666667,0.435,False
+254,Southern,Andhra Pradesh,Amravati,Amaravathi Temple,Temple,,1.0,4.7,0.0,Yes,,Religious,No,0.041,All,Low,Free,Excellent,4.7,0.474,False
+255,Southern,Andhra Pradesh,Guntur,Uppalapadu Bird Sanctuary,Bird Sanctuary,,1.0,4.4,10.0,Yes,,Wildlife,Yes,0.7,All,Very High,Low (<=50),Good,4.0,0.475,False
+256,Southern,Andhra Pradesh,Kadapa,Gandikota Fort,Fort,,1.5,4.5,0.0,No,,Historical,Yes,0.015,Morning,Low,Free,Good,4.5,0.443,False
+257,Southern,Andhra Pradesh,Puttaparthi,Prasanthi Nilayam,Spiritual Center,1950.0,1.0,4.7,0.0,Yes,,Religious,Yes,0.12,All,Medium,Free,Excellent,4.7,0.479,False
+258,Southern,Andhra Pradesh,Vizianagaram,Simhachalam Temple,Temple,198.0,1.0,4.7,0.0,Yes,,Religious,No,0.59,All,Very High,Free,Excellent,4.7,0.511,False
+259,Southern,Andhra Pradesh,Visakhapatnam,Kailasagiri,Hill,,2.0,4.5,0.0,Yes,,Recreational,Yes,0.019,All,Low,Free,Good,4.5,0.443,False
+260,Southern,Andhra Pradesh,Visakhapatnam,Submarine Museum,Museum,22.0,1.0,4.6,40.0,Yes,,Historical,Yes,0.49,All,High,Low (<=50),Excellent,3.2857142857142856,0.49,False
+261,Southern,Andhra Pradesh,Visakhapatnam,Borra Caves,Cave,,2.0,4.5,60.0,No,,Natural Wonder,Yes,0.31,Afternoon,High,Moderate (51-200),Good,2.8125,0.463,False
+262,Southern,Andhra Pradesh,Visakhapatnam,War Memorial,War Memorial,,1.0,4.6,0.0,Yes,,Historical,Yes,0.059,All,Low,Free,Excellent,4.6,0.46,False
+263,Southern,Andhra Pradesh,Visakhapatnam,Indira Gandhi Zoological Park,Zoo,1977.0,2.0,4.1,20.0,Yes,Monday,Wildlife,Yes,0.25,Afternoon,High,Low (<=50),Good,3.4166666666666665,0.402,False
+264,Southern,Andhra Pradesh,Visakhapatnam,Matsyadarshini Aquarium,Aquarium,,1.0,3.8,20.0,Yes,,Recreational,Yes,0.03,All,Low,Low (<=50),Average,3.1666666666666665,0.344,False
+265,Southern,Andhra Pradesh,Visakhapatnam,Visakha Museum,Museum,1991.0,1.0,4.3,10.0,Yes,,Cultural,Yes,0.065,All,Medium,Low (<=50),Good,3.9090909090909087,0.418,False
+266,Eastern,Sikkim,Gangtok,Nathula Pass,Hill,,2.0,4.3,20.0,Yes,,Historical,Yes,0.15,Afternoon,Medium,Low (<=50),Good,3.5833333333333335,0.424,False
+267,Eastern,Sikkim,Pelling,Pemayangtse Monastery,Monastery,1705.0,1.0,4.6,20.0,No,,Religious,No,0.015,Morning,Low,Low (<=50),Excellent,3.833333333333333,0.457,False
+268,Eastern,Sikkim,Namchi,Char Dham,Religious Complex,211.0,2.0,4.7,50.0,Yes,,Religious,No,0.12,All,Medium,Low (<=50),Excellent,3.1333333333333333,0.479,False
+269,Eastern,Sikkim,Gangtok,Rumtek Monastery,Monastery,,1.0,4.6,10.0,Yes,,Religious,No,0.035,Morning,Low,Low (<=50),Excellent,4.181818181818181,0.459,False
+270,Eastern,Sikkim,Ravangla,Buddha Park,Park,213.0,1.0,4.8,50.0,Yes,,Cultural,Yes,0.1,All,Medium,Low (<=50),Excellent,3.1999999999999997,0.492,False
+271,Eastern,Sikkim,Gangtok,Baba Harbhajan Singh Temple,Temple,1967.0,1.0,4.7,0.0,Yes,,Religious,No,0.075,All,Medium,Free,Excellent,4.7,0.476,False
+272,Eastern,Sikkim,Gangtok,Tsomgo Lake,Lake,,2.0,4.5,0.0,Yes,,Nature,Yes,0.15,Morning,Medium,Free,Good,4.5,0.452,False
+273,North Eastern,Assam,Guwahati,Kamakhya Temple,Temple,,2.0,4.6,0.0,Yes,,Religious,No,0.21,All,High,Free,Excellent,4.6,0.471,False
+274,North Eastern,Assam,Kaziranga,Kaziranga National Park,National Park,1905.0,3.0,4.5,650.0,No,,Wildlife,No,0.068,Morning,Medium,High (201-1000),Good,0.6,0.447,False
+275,North Eastern,Assam,Guwahati,Umananda Island,Island,,1.0,4.1,0.0,Yes,,Nature,Yes,0.01,Morning,Low,Free,Good,4.1,0.386,False
+276,North Eastern,Assam,Sivasagar,Sivasagar Sivadol,Temple,1734.0,1.0,4.7,0.0,No,,Historical,Yes,0.065,All,Medium,Free,Excellent,4.7,0.475,False
+277,North Eastern,Assam,Majuli,Majuli Island,River Island,,2.0,4.7,0.0,No,,Cultural,Yes,0.01,Morning,Low,Free,Excellent,4.7,0.471,False
+278,North Eastern,Assam,Manas,Manas National Park,National Park,1990.0,3.0,4.6,500.0,No,,Wildlife,Yes,0.19,Morning,High,High (201-1000),Excellent,0.7666666666666666,0.469,False
+279,North Eastern,Assam,Hajo,Hayagriva Madhava Temple,Temple,,1.0,4.5,0.0,No,,Religious,Yes,0.9,All,Very High,Free,Good,4.5,0.503,False
+280,North Eastern,Assam,Guwahati,Pobitora Wildlife Sanctuary,Wildlife Sanctuary,1987.0,2.0,4.4,500.0,Yes,,Wildlife,Yes,0.037,All,Low,High (201-1000),Good,0.7333333333333334,0.43,False
+281,North Eastern,Arunachal Pradesh,Tawang,Tawang Monastery,Monastery,1680.0,2.0,4.7,0.0,No,,Religious,No,0.032,Morning,Low,Free,Excellent,4.7,0.473,False
+282,North Eastern,Tripura,Agartala,Ujjayanta Palace,Palace,1901.0,1.5,4.5,10.0,Yes,Monday,Historical,Yes,0.035,All,Low,Low (<=50),Good,4.090909090909091,0.445,False
+283,North Eastern,Tripura,Dumboor,Dumboor Lake,Lake,,1.0,4.5,0.0,No,,Nature,Yes,0.01,Morning,Low,Free,Good,4.5,0.443,False
+284,North Eastern,Tripura,Unakoti,Unakoti Rock Carvings,Rock Carvings,700.0,1.5,4.5,20.0,No,,Historical,Yes,0.025,Morning,Low,Low (<=50),Good,3.75,0.444,False
+285,Central,Chhattisgarh,Bastar,Chitrakote Falls,Waterfall,,1.5,4.6,0.0,No,,Nature,Yes,0.19,Morning,High,Free,Excellent,4.6,0.469,False
+286,North Eastern,Nagaland,Dzükou Valley,Dzükou Valley,Valley,,3.0,4.7,0.0,No,,Trekking,Yes,0.01,Afternoon,Low,Free,Excellent,4.7,0.471,False
+287,Southern,Puducherry,Puducherry,Promenade Beach,Beach,,1.0,4.5,0.0,Yes,,Recreational,Yes,0.09,Morning,Medium,Free,Good,4.5,0.448,False
+288,Southern,Puducherry,Auroville,Auroville,Township,1968.0,2.0,4.1,0.0,Yes,,Cultural,Yes,0.035,All,Low,Free,Good,4.1,0.387,False
+289,Southern,Puducherry,Puducherry,Paradise Beach,Beach,,1.0,4.5,200.0,Yes,,Recreational,Yes,0.015,Morning,Low,Moderate (51-200),Good,1.5,0.443,False
+290,Southern,Andaman And Nicobar Islands,Port Blair,Cellular Jail,Landmark,1906.0,1.5,4.7,30.0,Yes,Monday,Historical,Yes,0.12,Afternoon,Medium,Low (<=50),Excellent,3.6153846153846154,0.479,False
+291,Southern,Andaman And Nicobar Islands,Havelock Island,Radhanagar Beach,Beach,,1.0,4.8,0.0,No,,Nature,Yes,0.09,Morning,Medium,Free,Excellent,4.8,0.491,False
+292,Southern,Andaman And Nicobar Islands,Neil Island,Bharatpur Beach,Beach,,1.0,4.5,0.0,No,,Nature,Yes,0.04,Morning,Low,Free,Good,4.5,0.445,False
+293,Southern,Andaman And Nicobar Islands,Baratang Island,Limestone Caves,Natural Feature,,1.5,4.4,250.0,No,,Nature,Yes,0.015,Morning,Low,High (201-1000),Good,1.2571428571428573,0.429,False
+294,Western,Daman And Diu,Diu,Naida Caves,Cave,,1.0,4.5,0.0,No,,Nature,Yes,0.6,Afternoon,Very High,Free,Good,4.5,0.483,False
+295,Western,Daman And Diu,Diu,Diu Fort,Fort,1535.0,1.5,4.6,0.0,No,,Historical,Yes,1.2,Afternoon,Very High,Free,Excellent,4.6,0.538,False
+296,Eastern,Jharkhand,Deoghar,Baba Baidyanath Temple,Temple,,1.0,4.7,0.0,Yes,,Religious,Yes,1.8,All,Very High,Free,Excellent,4.7,0.593,False
+297,Eastern,Jharkhand,Ranchi,Pahari Mandir,Temple,,1.0,4.6,0.0,Yes,,Religious,Yes,0.13,All,Medium,Free,Excellent,4.6,0.465,False
+298,Eastern,Bihar,Bodh Gaya,Mahabodhi Temple,Temple,,1.5,4.7,0.0,Yes,,Religious,Yes,0.2,All,High,Free,Excellent,4.7,0.484,False
+299,Eastern,Bihar,Patna,Sanjay Gandhi Biological Park,Zoo,,2.5,4.3,30.0,Yes,,Wildlife,Yes,0.5,All,Very High,Low (<=50),Good,3.3076923076923075,0.447,False
+300,Eastern,Bihar,Patna,Takhat Shri Harimandir Ji Patna Sahib,Gurudwara,,1.0,4.7,0.0,Yes,,Religious,Yes,0.25,All,High,Free,Excellent,4.7,0.488,False
+301,Eastern,Bihar,Patna,Budhha Smriti Park,Park,,1.0,4.4,10.0,Yes,,Cultural,Yes,0.31,All,High,Low (<=50),Good,4.0,0.449,False
+302,Northern,Haryana,Gurugram,Kingdom of Dreams,Entertainment,2010.0,3.0,4.4,1100.0,Yes,Monday,Entertainment,Yes,0.3,Afternoon,High,Premium (1000+),Good,0.3666666666666667,0.448,False
+303,Northern,Haryana,Gurugram,Ambience Mall,Mall,,2.0,4.6,0.0,Yes,,Shopping,Yes,1.2,Afternoon,Very High,Free,Excellent,4.6,0.538,False
+304,Northern,Haryana,Gurugram,DLF CyberHub,Commercial Complex,,2.0,4.7,0.0,Yes,,Entertainment,Yes,0.71,Afternoon,Very High,Free,Excellent,4.7,0.519,False
+305,Northern,Delhi,New Delhi,Gurudwara Bangla Sahib,Gurudwara,,1.0,4.8,0.0,Yes,,Religious,Yes,1.05,All,Very High,Free,Excellent,4.8,0.556,False
+306,Northern,Uttarakhand,Kedarnath,Kedarnath,Temple,,1.5,4.8,0.0,No,,Religious,No,2.0,All,Very High,Free,Excellent,4.8,0.62,False
+307,Central,Uttar Pradesh,Noida,DLF Mall of India,Mall,2016.0,2.0,4.6,0.0,Yes,,Shopping,Yes,1.5,All,Very High,Free,Excellent,4.6,0.558,False
+308,Central,Uttar Pradesh,Greater Noida,The Grand Venice Mall,Mall,,2.0,4.2,0.0,Yes,,Shopping,Yes,0.45,All,High,Free,Good,4.2,0.43,False
+309,Southern,Karnataka,Bengaluru,Wonderla Amusement Park,Amusement Park,2005.0,4.0,4.5,890.0,Yes,,Entertainment,Yes,0.95,All,Very High,High (201-1000),Good,0.45454545454545453,0.506,False
+310,Eastern,Odisha,Bhubaneswar,Nandankanan Zoological Park,Zoo,1960.0,3.0,4.4,50.0,Yes,Monday,Wildlife,Yes,0.81,Afternoon,Very High,Low (<=50),Good,2.9333333333333336,0.483,False
+311,Southern,Karnataka,Bengaluru,Orion Mall,Mall,2012.0,2.0,4.5,0.0,Yes,,Shopping,Yes,1.8,All,Very High,Free,Good,4.5,0.564,False
+312,Southern,Telangana,Hyderabad,Inorbit Mall Cyberabad,Mall,2004.0,2.0,4.5,0.0,Yes,,Shopping,Yes,1.2,All,Very High,Free,Good,4.5,0.523,False
+313,Northern,Delhi,New Delhi,Jama Masjid,Mosque,1656.0,1.0,4.5,0.0,Yes,,Historical,Yes,0.49,All,High,Free,Good,4.5,0.475,False
+315,Central,Uttar Pradesh,Greater Noida,Buddh International Circuit,Race Track,2011.0,2.0,4.6,1500.0,Yes,Sunday,Sports,Yes,7.4,All,Very High,Premium (1000+),Excellent,0.2875,0.957,False
+316,Central,Uttar Pradesh,Lucknow,Phoenix Palassio,Mall,2020.0,2.0,4.6,0.0,Yes,,Shopping,Yes,0.35,All,High,Free,Excellent,4.6,0.48,False
+317,Southern,Kerala,Kochi,LuLu International Shopping Mall,Mall,2013.0,3.0,4.6,0.0,Yes,,Shopping,Yes,1.9,All,Very High,Free,Excellent,4.6,0.585,False
+318,Northern,Delhi,New Delhi,Rail Museum,Museum,1977.0,2.0,4.4,50.0,Yes,Monday,Cultural,Yes,0.24,Morning,High,Low (<=50),Good,2.9333333333333336,0.444,False
+319,North Eastern,Meghalaya,Cherrapunji,Living Root Bridge,Natural Feature,,2.0,4.6,0.0,No,,Nature,Yes,0.06,Morning,Medium,Free,Excellent,4.6,0.461,False
+320,Western,Gujarat,Gandhinagar,Akshardham,Temple,1992.0,3.0,4.6,0.0,Yes,Monday,Religious,No,0.18,All,High,Free,Excellent,4.6,0.469,False
+321,Central,Uttar Pradesh,Agra,Agra Fort,Fort,1565.0,2.0,4.5,40.0,Yes,,Historical,Yes,1.3,Afternoon,Very High,Low (<=50),Good,3.2142857142857144,0.53,False
+322,Central,Madhya Pradesh,Bhopal,Madhya Pradesh Tribal Museum,Museum,2013.0,2.0,4.7,10.0,Yes,Monday,Cultural,Yes,0.15,All,Medium,Low (<=50),Excellent,4.2727272727272725,0.481,False
+323,Northern,Rajasthan,Jaipur,City Palace,Palace,1727.0,2.0,4.4,200.0,Yes,,Historical,Yes,0.51,Morning,Very High,Moderate (51-200),Good,1.4666666666666668,0.462,False
+324,Northern,Rajasthan,Jaipur,Albert Hall Museum,Museum,1887.0,2.0,4.5,200.0,Yes,,Historical,Yes,0.63,All,Very High,Moderate (51-200),Good,1.5,0.485,False

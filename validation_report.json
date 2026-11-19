@@ -1,0 +1,75 @@
+{
+  "flights": {
+    "rows": 300153,
+    "columns": [
+      "airline",
+      "flight",
+      "source_city",
+      "departure_time",
+      "stops",
+      "arrival_time",
+      "destination_city",
+      "travel_class",
+      "days_left",
+      "duration_hours",
+      "price_inr"
+    ],
+    "missing_values": {},
+    "duplicate_rows": 0
+  },
+  "hotels": {
+    "rows": 4000,
+    "columns": [
+      "property_id",
+      "hotel_name",
+      "city",
+      "state",
+      "address",
+      "property_type",
+      "hotel_category",
+      "star_rating",
+      "review_rating",
+      "review_count",
+      "hotel_facilities",
+      "room_facilities",
+      "room_type",
+      "latitude",
+      "longitude",
+      "crawl_date",
+      "pageurl"
+    ],
+    "missing_values": {
+      "star_rating": 1936,
+      "review_rating": 1584,
+      "review_count": 1584,
+      "hotel_facilities": 194,
+      "room_facilities": 270
+    },
+    "duplicate_rows": 0
+  },
+  "places": {
+    "rows": 323,
+    "columns": [
+      "zone",
+      "state",
+      "city",
+      "place_name",
+      "type",
+      "establishment_year",
+      "visit_duration_hours",
+      "rating",
+      "entrance_fee_inr",
+      "airport_within_50km",
+      "weekly_off",
+      "significance",
+      "dslr_allowed",
+      "review_count_lakhs",
+      "best_time_to_visit"
+    ],
+    "missing_values": {
+      "establishment_year": 131,
+      "weekly_off": 291
+    },
+    "duplicate_rows": 0
+  }
+}
