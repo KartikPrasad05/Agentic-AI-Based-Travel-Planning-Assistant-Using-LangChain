@@ -387,14 +387,4 @@ if "current_plan" in st.session_state:
         )
         st.json(json.loads(json_dump))
 
-# -----------------------------------------------------------------------------
-# FOOTER / ACADEMIC DISCLAIMER
-# -----------------------------------------------------------------------------
-st.markdown("---")
-with st.expander("ℹ️ Academic Project & Dataset Transparency Notices"):
-    st.markdown("""
-    - **Academic Project:** *Agentic AI-Based Travel Planning Assistant Using LangChain*
-    - **Datasets:** Indian Airlines historical domestic fares (300,153 records), Goibibo hotel catalogue (4,000 listings), and Indian destination spots (323 records).
-    - **Live APIs:** Real-time multi-day weather forecasts are fetched via the free [Open-Meteo API](https://open-meteo.com/).
-    - **Important Disclaimer:** Flight and hotel prices represent static/historical research baselines, not live bookable commercial inventory. Missing rates are labeled honestly rather than fabricated.
-    """)
+
