@@ -84,16 +84,28 @@ st.markdown("""
         margin-bottom: 16px;
     }
     .feature-card {
-        background-color: #F8FAFC;
+        background-color: #FFFFFF;
         border: 1px solid #E2E8F0;
         border-radius: 12px;
         padding: 20px;
         height: 100%;
+        color: #000000 !important;
         transition: transform 0.15s ease-in-out;
+    }
+    .feature-card h4 {
+        color: #000000 !important;
+        font-weight: 700 !important;
+        font-size: 1.15rem !important;
+        margin-bottom: 8px !important;
+    }
+    .feature-card p {
+        color: #000000 !important;
+        font-size: 0.92rem !important;
+        line-height: 1.55 !important;
     }
     .feature-card:hover {
         border-color: #3B82F6;
-        box-shadow: 0 4px 12px rgba(59,130,246,0.08);
+        box-shadow: 0 4px 12px rgba(59,130,246,0.15);
     }
     .badge-historical {
         background-color: #FEF3C7;
@@ -702,8 +714,8 @@ st.markdown(
 col_a1, col_a2, col_a3 = st.columns(3)
 with col_a1:
     st.markdown("""<div class="feature-card">
-<h4>⚡ Saves Hours of Planning</h4>
-<p style="color: #64748B; font-size: 0.92rem;">
+<h4 style="color: #000000 !important; font-weight: 700; margin-bottom: 8px;">⚡ Saves Hours of Planning</h4>
+<p style="color: #000000 !important; font-size: 0.92rem; line-height: 1.55;">
 Eliminates switching across dozens of flight aggregators, booking portals, and travel blogs. 
 Simply select your destination and preferences in the sidebar to get a synthesized, complete itinerary in seconds.
 </p>
@@ -711,8 +723,8 @@ Simply select your destination and preferences in the sidebar to get a synthesiz
 
 with col_a2:
     st.markdown("""<div class="feature-card">
-<h4>🎯 Fatigue-Free Realistic Pacing</h4>
-<p style="color: #64748B; font-size: 0.92rem;">
+<h4 style="color: #000000 !important; font-weight: 700; margin-bottom: 8px;">🎯 Fatigue-Free Realistic Pacing</h4>
+<p style="color: #000000 !important; font-size: 0.92rem; line-height: 1.55;">
 Unlike generic planners that overload 10 sights a day, our engine caps activities to 2–3 daily stops, 
 respects opening hours, closing days (weekly off), and coordinates return-day flights.
 </p>
@@ -720,8 +732,8 @@ respects opening hours, closing days (weekly off), and coordinates return-day fl
 
 with col_a3:
     st.markdown("""<div class="feature-card">
-<h4>💰 100% Transparent Budgeting</h4>
-<p style="color: #64748B; font-size: 0.92rem;">
+<h4 style="color: #000000 !important; font-weight: 700; margin-bottom: 8px;">💰 100% Transparent Budgeting</h4>
+<p style="color: #000000 !important; font-size: 0.92rem; line-height: 1.55;">
 Computes true trip cost including flights, hotel nights, customizable daily dining, local transit, 
 and monument tickets. Differentiates verified rates from estimates with zero hidden math.
 </p>
