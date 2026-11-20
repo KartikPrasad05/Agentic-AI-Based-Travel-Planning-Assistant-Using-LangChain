@@ -208,14 +208,18 @@ class ItineraryGenerator:
                     )
                 )
             else:
+                # Do not invent temperatures when the API has no data for this date.
                 weather_days.append(
                     WeatherForecastDay(
                         date=target_date_str,
-                        condition="Seasonal Historical Climate",
-                        temp_max_c=30.0,
-                        temp_min_c=21.0,
-                        precipitation_probability_pct=10,
-                        travel_advice="Trip dates beyond live forecast horizon; typical seasonal climate shown.",
+                        condition="Forecast unavailable",
+                        temp_max_c=None,
+                        temp_min_c=None,
+                        precipitation_probability_pct=None,
+                        travel_advice=weather_res.get(
+                            "data_notice",
+                            weather_res.get("message", "No forecast data returned for this date."),
+                        ),
                     )
                 )
 
@@ -337,11 +341,11 @@ class ItineraryGenerator:
                     activities.append(
                         ActivityItem(
                             time_slot="Midday (Departure)",
-                            activity_name=f"Board Return Flight to {config.normalize_city_name(source_city)} ({flight_model.airline})",
+                            activity_name=f"Return flight to {config.normalize_city_name(source_city)} (not searched)",
                             category="Departure",
-                            estimated_duration_hours=2.5,
+                            estimated_duration_hours=0.0,
                             entrance_fee_inr=0.0,
-                            highlights_or_tips=f"Scheduled departure: {flight_model.departure_time}.",
+                            highlights_or_tips="The dataset search selected an outbound flight only. Search and confirm a separate return flight before travel.",
                         )
                     )
                 elif "afternoon" in flight_dep:
@@ -359,11 +363,11 @@ class ItineraryGenerator:
                     activities.append(
                         ActivityItem(
                             time_slot="Afternoon (Departure)",
-                            activity_name=f"Hotel Check-out, Airport Transit & Flight to {config.normalize_city_name(source_city)}",
+                            activity_name=f"Hotel Check-out & return flight to {config.normalize_city_name(source_city)} (not searched)",
                             category="Departure",
-                            estimated_duration_hours=3.0,
+                            estimated_duration_hours=0.0,
                             entrance_fee_inr=0.0,
-                            highlights_or_tips=f"Check out by 12:00 PM; airport departure at {flight_model.departure_time}.",
+                            highlights_or_tips="Check out by the hotel's stated time. A return flight has not been searched or confirmed; arrange airport transit and return booking separately.",
                         )
                     )
                 else:
@@ -521,7 +525,9 @@ class ItineraryGenerator:
             hotel_nightly_price=hotel_model.price_per_night_inr,
             trip_days=days,
             num_travelers=travelers,
-            is_round_trip=True,
+            # Only the outbound route is searched by the current flight tool.
+            # Do not double the fare or imply a return booking exists.
+            is_round_trip=False,
             daily_food_per_person=daily_food_per_person,
             daily_transport=daily_transport,
             entrance_fees_per_person=total_entrance_fees_per_person,
@@ -547,10 +553,12 @@ class ItineraryGenerator:
             else f"Flight route between {source_city} and {destination_city} requires external booking."
         )
 
+        hotel_rating = hotel_model.review_rating or hotel_model.star_rating
         hotel_just = (
-            f"Recommended {hotel_model.hotel_name} based on its verified central location in "
-            f"{config.normalize_city_name(destination_city)}, rating ({hotel_model.review_rating or hotel_model.star_rating or 4.0}★), "
-            f"and rate of ₹{int(hotel_model.price_per_night_inr):,}/night."
+            f"Recommended {hotel_model.hotel_name} from the project hotel catalogue"
+            + (f" with a listed rating of {hotel_rating}★" if hotel_rating is not None else "")
+            + f" and a reference budget rate of ₹{int(hotel_model.price_per_night_inr):,}/night. "
+              "Confirm current rates and availability with the property before booking."
             if hotel_model.price_per_night_inr > 0
             else f"Accommodation in {destination_city} requires external booking."
         )
@@ -563,7 +571,7 @@ class ItineraryGenerator:
                 "local leisure walks to maintain a relaxed 2-3 activity daily pacing without traveler fatigue."
             ),
             pacing_justification=(
-                "Return-day schedule is coordinated with scheduled flight departure times to eliminate transit conflicts."
+                "The final day is reserved for checkout and return travel. A return flight is not included because the current flight search only selected the outbound route."
             ),
         )
 
@@ -581,6 +589,11 @@ class ItineraryGenerator:
             day_wise_schedule=schedule,
             budget=budget_model,
             justifications=justifications,
+            data_limitations=(
+                "Outbound flight fare is a historical/reference dataset value; no return flight was searched or included in the budget. "
+                "Hotel rates are reference values, not live prices or availability. Confirm all bookings directly. "
+                "Weather dates without an API result are marked unavailable rather than estimated."
+            ),
         )
 
     def save_itinerary_json(self, itinerary: CompleteTravelItinerary, filename: Optional[str] = None) -> Path:
