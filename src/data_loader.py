@@ -120,12 +120,12 @@ class DataLoader:
                         "hotel_name": item.get("name", "Hotel").strip(),
                         "city": config.normalize_city_name(item.get("city", "")),
                         "star_rating": float(item.get("stars", 3)),
-                        "review_rating": float(item.get("stars", 3)),
+                        "review_rating": None,  # Official star category is not a guest-review score.
                         "price_per_night": float(item.get("price_per_night", 3500)),
                         "amenities": [a.lower().strip() for a in item.get("amenities", [])],
                         "address": f"Central {item.get('city', '')}",
                         "is_reference": True,
-                        "has_verified_price": True,
+                        "has_verified_price": False,  # Static project data, not a live verified rate.
                     })
                 self._hotels_json = normalized
         return self._hotels_json

@@ -49,7 +49,7 @@ def search_hotels(
 
     results: List[Dict[str, Any]] = []
 
-    # 1. Query baseline reference hotels (these have verified nightly prices!)
+    # 1. Query static project reference hotels (not live or booking-verified).
     ref_hotels = loader.load_hotels_json()
     for h in ref_hotels:
         if h["city"].lower() == norm_city.lower():
@@ -74,12 +74,12 @@ def search_hotels(
                 "address": h.get("address", f"Central {norm_city}"),
                 "star_rating": rating,
                 "review_rating": h.get("review_rating", rating),
-                "review_count": "Verified Benchmark",
+                "review_count": None,
                 "price_per_night_inr": price,
-                "price_source": "Reference Baseline (Verified)",
+                "price_source": "Project Reference Dataset (not live)",
                 "amenities": amenities,
                 "property_type": "Hotel / Resort",
-                "is_verified_price": True,
+                "is_verified_price": False,
             })
 
     # 2. Query Goibibo 4,000-hotel catalogue for rich property discovery
@@ -151,7 +151,7 @@ def search_hotels(
 
     # Sort: prioritize verified-price baseline hotels first, then highest rating
     def sort_key(x):
-        verified_rank = 0 if x["is_verified_price"] else 1
+        verified_rank = 0 if x["price_source"] == "Project Reference Dataset (not live)" else 1
         rating_rank = -(x["review_rating"] or x["star_rating"] or 3.0)
         return (verified_rank, rating_rank)
 
@@ -161,7 +161,7 @@ def search_hotels(
     for item in sorted_hotels:
         reasons = []
         if item["is_verified_price"]:
-            reasons.append(f"Verified budget pricing at ₹{int(item['price_per_night_inr'])}/night")
+            reasons.append(f"Reference dataset rate ₹{int(item['price_per_night_inr'])}/night (not live)")
         if item.get("review_rating") and item["review_rating"] >= 4.0:
             reasons.append(f"High review rating ({item['review_rating']}★)")
         elif item.get("star_rating") and item["star_rating"] >= 4.0:
