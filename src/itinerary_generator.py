@@ -278,7 +278,7 @@ class ItineraryGenerator:
                         category="Departure",
                         estimated_duration_hours=2.5,
                         entrance_fee_inr=0.0,
-                        highlights_or_tips="Same-day return journey; reach departure gate 1.5h prior.",
+                        highlights_or_tips="A return flight has not been searched or confirmed. Arrange transport and book a separate return journey.",
                     )
                 )
 
@@ -324,100 +324,26 @@ class ItineraryGenerator:
             # CASE C: Final Return Day of Multi-Day Trip (d == days, days > 1)
             elif d == days:
                 theme = f"Hotel Check-out & Return to {config.normalize_city_name(source_city)}"
-
-                # Align activities based on flight departure timing
-                if "morning" in flight_dep or "early" in flight_dep:
-                    # Morning departure: Check out immediately, transit to airport
-                    activities.append(
-                        ActivityItem(
-                            time_slot="Morning (Check-out)",
-                            activity_name=f"Hotel Check-out at {hotel_model.hotel_name} & Airport Transit",
-                            category="Logistics",
-                            estimated_duration_hours=2.0,
-                            entrance_fee_inr=0.0,
-                            highlights_or_tips="Settle hotel bill, pack bags, and head directly to airport for morning departure.",
-                        )
+                activities.append(
+                    ActivityItem(
+                        time_slot="Morning (Check-out)",
+                        activity_name=f"Hotel Check-out at {hotel_model.hotel_name}",
+                        category="Logistics",
+                        estimated_duration_hours=1.0,
+                        entrance_fee_inr=0.0,
+                        highlights_or_tips="Confirm the property's checkout time and settle any outstanding charges.",
                     )
-                    activities.append(
-                        ActivityItem(
-                            time_slot="Midday (Departure)",
-                            activity_name=f"Return flight to {config.normalize_city_name(source_city)} (not searched)",
-                            category="Departure",
-                            estimated_duration_hours=0.0,
-                            entrance_fee_inr=0.0,
-                            highlights_or_tips="The dataset search selected an outbound flight only. Search and confirm a separate return flight before travel.",
-                        )
+                )
+                activities.append(
+                    ActivityItem(
+                        time_slot="After Check-out",
+                        activity_name=f"Return travel to {config.normalize_city_name(source_city)} (booking required)",
+                        category="Departure",
+                        estimated_duration_hours=0.0,
+                        entrance_fee_inr=0.0,
+                        highlights_or_tips="A return flight has not been searched or confirmed. Arrange airport transfer and book a separate return flight; timing is not available in this plan.",
                     )
-                elif "afternoon" in flight_dep:
-                    # Afternoon departure: Morning leisure, then check-out and airport
-                    activities.append(
-                        ActivityItem(
-                            time_slot="Morning",
-                            activity_name="Souvenir Shopping & Handicraft Bazaar",
-                            category="Leisure / Shopping",
-                            estimated_duration_hours=2.0,
-                            entrance_fee_inr=0.0,
-                            highlights_or_tips="Pick up local spices, handicrafts, and souvenirs.",
-                        )
-                    )
-                    activities.append(
-                        ActivityItem(
-                            time_slot="Afternoon (Departure)",
-                            activity_name=f"Hotel Check-out & return flight to {config.normalize_city_name(source_city)} (not searched)",
-                            category="Departure",
-                            estimated_duration_hours=0.0,
-                            entrance_fee_inr=0.0,
-                            highlights_or_tips="Check out by the hotel's stated time. A return flight has not been searched or confirmed; arrange airport transit and return booking separately.",
-                        )
-                    )
-                else:
-                    # Evening or Night departure: Morning final attraction, afternoon packing, evening flight
-                    if place_idx < num_places:
-                        p_final = raw_places[place_idx]
-                        place_idx += 1
-                        activities.append(
-                            ActivityItem(
-                                time_slot="Morning",
-                                activity_name=p_final["place_name"],
-                                category=p_final.get("category", "Culture"),
-                                estimated_duration_hours=p_final.get("visit_duration_hours", 2.0),
-                                entrance_fee_inr=p_final.get("entrance_fee_inr", 0.0),
-                                highlights_or_tips=f"Last-minute photography and sightseeing (Rated {p_final.get('rating', 4.0)}★).",
-                            )
-                        )
-                        total_entrance_fees_per_person += p_final.get("entrance_fee_inr", 0.0)
-                    else:
-                        activities.append(
-                            ActivityItem(
-                                time_slot="Morning",
-                                activity_name="Local Heritage Walk & Cafe Breakfast",
-                                category="Leisure",
-                                estimated_duration_hours=2.0,
-                                entrance_fee_inr=0.0,
-                                highlights_or_tips="Relaxing stroll through historical streets and local cafe breakfast.",
-                            )
-                        )
-
-                    activities.append(
-                        ActivityItem(
-                            time_slot="Afternoon",
-                            activity_name=f"Hotel Check-out at {hotel_model.hotel_name} & Souvenir Shopping",
-                            category="Logistics / Shopping",
-                            estimated_duration_hours=2.0,
-                            entrance_fee_inr=0.0,
-                            highlights_or_tips="Store luggage with concierge, pick up gifts and sweets.",
-                        )
-                    )
-                    activities.append(
-                        ActivityItem(
-                            time_slot="Evening (Departure)",
-                            activity_name=f"Airport Transit & Evening Flight to {config.normalize_city_name(source_city)}",
-                            category="Departure",
-                            estimated_duration_hours=3.0,
-                            entrance_fee_inr=0.0,
-                            highlights_or_tips=f"Reach airport 2h prior to flight departure at {flight_model.departure_time}.",
-                        )
-                    )
+                )
 
             # CASE D: Middle Full Days
             else:
