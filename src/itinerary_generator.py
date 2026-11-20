@@ -274,7 +274,7 @@ class ItineraryGenerator:
                 activities.append(
                     ActivityItem(
                         time_slot="Evening (Departure)",
-                        activity_name=f"Airport Transit & Return Flight to {config.normalize_city_name(source_city)}",
+                        activity_name=f"Return travel to {config.normalize_city_name(source_city)} (booking required)",
                         category="Departure",
                         estimated_duration_hours=2.5,
                         entrance_fee_inr=0.0,
@@ -387,7 +387,7 @@ class ItineraryGenerator:
                             category=p_aft.get("category", "Attraction"),
                             estimated_duration_hours=p_aft.get("visit_duration_hours", 2.0),
                             entrance_fee_inr=p_aft.get("entrance_fee_inr", 0.0),
-                            highlights_or_tips=f"Explore exhibits and architecture. Rated {p_aft.get('rating', 4.0)}★.",
+                            highlights_or_tips=f"Visit this attraction and explore its surroundings. Rated {p_aft.get('rating', 4.0)}★.",
                         )
                     )
                     total_entrance_fees_per_person += p_aft.get("entrance_fee_inr", 0.0)
@@ -414,7 +414,7 @@ class ItineraryGenerator:
                             category=p_eve.get("category", "Sunset / Leisure"),
                             estimated_duration_hours=p_eve.get("visit_duration_hours", 2.0),
                             entrance_fee_inr=p_eve.get("entrance_fee_inr", 0.0),
-                            highlights_or_tips="Scenic evening atmosphere and sunset view.",
+                            highlights_or_tips="Enjoy the attraction and nearby surroundings; check local access timings before visiting.",
                         )
                     )
                     total_entrance_fees_per_person += p_eve.get("entrance_fee_inr", 0.0)
