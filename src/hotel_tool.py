@@ -49,7 +49,7 @@ def search_hotels(
 
     results: List[Dict[str, Any]] = []
 
-    # 1. Query baseline reference hotels (these have verified nightly prices!)
+    # 1. Query static project reference hotels (not live or booking-verified).
     ref_hotels = loader.load_hotels_json()
     for h in ref_hotels:
         if h["city"].lower() == norm_city.lower():
@@ -74,7 +74,7 @@ def search_hotels(
                 "address": h.get("address", f"Central {norm_city}"),
                 "star_rating": rating,
                 "review_rating": h.get("review_rating", rating),
-                "review_count": "Verified Benchmark",
+                "review_count": None,
                 "price_per_night_inr": price,
                 "price_source": "Project Reference Dataset (not live)",
                 "amenities": amenities,
