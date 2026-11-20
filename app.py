@@ -1,4 +1,4 @@
-"""Streamlit Web Application for the Agentic AI Travel Planning Assistant (VoyAgent AI).
+"""Streamlit Web Application for the Agentic AI Travel Planning Assistant (Smart-Trip-Plan).
 
 Provides an interactive user interface for querying, customizing, and
 generating autonomous day-wise travel itineraries with LangChain,
@@ -25,7 +25,7 @@ from src.prompts import CompleteTravelItinerary
 
 # Configure Streamlit page
 st.set_page_config(
-    page_title="VoyAgent AI — Agentic Travel Planning Assistant",
+    page_title="Smart-Trip-Plan — Agentic Travel Planning Assistant",
     page_icon="✈️",
     layout="wide",
     initial_sidebar_state="expanded",
@@ -37,7 +37,7 @@ if "is_logged_in" not in st.session_state:
 if "user_name" not in st.session_state:
     st.session_state["user_name"] = "Kartik Prasad"
 if "user_email" not in st.session_state:
-    st.session_state["user_email"] = "kartik@voyagent.ai"
+    st.session_state["user_email"] = "kartik@smarttripplan.ai"
 if "is_generating" not in st.session_state:
     st.session_state["is_generating"] = False
 
@@ -144,16 +144,14 @@ st.markdown("""
 # -----------------------------------------------------------------------------
 col_logo, col_nav = st.columns([5.5, 4.5])
 with col_logo:
-    st.markdown("""
-    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
-        <span style="font-size: 2rem;">✈️</span>
-        <div>
-            <span style="font-size: 1.55rem; font-weight: 800; color: #1E3A8A; letter-spacing: -0.5px;">VoyAgent AI</span>
-            <span style="background: #E0E7FF; color: #3730A3; padding: 2px 8px; border-radius: 12px; font-size: 0.75rem; font-weight: 600; margin-left: 6px;">v2.4 Live</span>
-            <div style="font-size: 0.82rem; color: #64748B;">Agentic Travel Concierge powered by LangChain & Open-Meteo</div>
-        </div>
-    </div>
-    """, unsafe_allow_html=True)
+    st.markdown("""<div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+<span style="font-size: 2rem;">✈️</span>
+<div>
+<span style="font-size: 1.55rem; font-weight: 800; color: #1E3A8A; letter-spacing: -0.5px;">Smart-Trip-Plan</span>
+<span style="background: #E0E7FF; color: #3730A3; padding: 2px 8px; border-radius: 12px; font-size: 0.75rem; font-weight: 600; margin-left: 6px;">v2.4 Live</span>
+<div style="font-size: 0.82rem; color: #64748B;">Agentic AI Travel Planning Assistant powered by LangChain & Open-Meteo</div>
+</div>
+</div>""", unsafe_allow_html=True)
 
 # Developer configuration relocated to top navbar popover (clean UI, preserved functionality)
 with col_nav:
@@ -394,21 +392,29 @@ st.markdown("### 🗺️ AI Travel Concierge")
 # Active Configuration Summary Card
 col_sum1, col_sum2 = st.columns([3.5, 1.5])
 with col_sum1:
-    st.markdown(f"""
-    <div class="summary-card">
-        <div style="font-size: 1.15rem; font-weight: 700; color: #93C5FD; margin-bottom: 4px;">
-            🛫 {source_city} &nbsp;➔&nbsp; 🛬 {destination_city}
-        </div>
-        <div style="font-size: 0.9rem; color: #CBD5E1;">
-            📅 <b>Dates:</b> {dep_date.strftime('%d %b %Y')} – {ret_date.strftime('%d %b %Y')} ({trip_days} Days, {hotel_nights} Nights)<br>
-            👥 <b>Travelers:</b> {num_travelers} ({travel_class} Class) &nbsp;|&nbsp; 
-            ✨ <b>Style:</b> {selected_category} &nbsp;|&nbsp; 
-            🏨 <b>Amenities:</b> {', '.join(selected_amenities) if selected_amenities else 'Any'}
-            {f"<br>💵 <b>Budget Cap:</b> ₹{total_budget_cap:,.0f}" if total_budget_cap > 0 else ""}
-            {f"<br>📝 <b>Notes:</b> {special_notes}" if special_notes else ""}
-        </div>
-    </div>
-    """, unsafe_allow_html=True)
+    extra_items = []
+    if total_budget_cap > 0:
+        extra_items.append(f"<br>💵 <b>Budget Cap:</b> ₹{total_budget_cap:,.0f}")
+    if special_notes:
+        extra_items.append(f"<br>📝 <b>Notes:</b> {special_notes}")
+    extra_html = "".join(extra_items)
+    amenities_str = ', '.join(selected_amenities) if selected_amenities else 'Any'
+
+    card_html = (
+        f'<div class="summary-card">'
+        f'<div style="font-size: 1.15rem; font-weight: 700; color: #93C5FD; margin-bottom: 4px;">'
+        f'🛫 {source_city} &nbsp;➔&nbsp; 🛬 {destination_city}'
+        f'</div>'
+        f'<div style="font-size: 0.9rem; color: #CBD5E1;">'
+        f'📅 <b>Dates:</b> {dep_date.strftime("%d %b %Y")} – {ret_date.strftime("%d %b %Y")} ({trip_days} Days, {hotel_nights} Nights)<br>'
+        f'👥 <b>Travelers:</b> {num_travelers} ({travel_class} Class) &nbsp;|&nbsp; '
+        f'✨ <b>Style:</b> {selected_category} &nbsp;|&nbsp; '
+        f'🏨 <b>Amenities:</b> {amenities_str}'
+        f'{extra_html}'
+        f'</div>'
+        f'</div>'
+    )
+    st.markdown(card_html, unsafe_allow_html=True)
 
 with col_sum2:
     st.write("")
@@ -687,45 +693,39 @@ if "current_plan" in st.session_state:
 # ABOUT THIS APP & HOW IT HELPS YOU (ABOVE FOOTER)
 # -----------------------------------------------------------------------------
 st.markdown("---")
-st.markdown("### 🌟 About VoyAgent AI & How It Helps You")
+st.markdown("### 🌟 About Smart-Trip-Plan & How It Helps You")
 st.markdown(
-    "VoyAgent AI is an **Agentic AI Travel Planning Assistant** engineered using LangChain, Open-Meteo, "
+    "Smart-Trip-Plan is an **Agentic AI Travel Planning Assistant** engineered using LangChain, Open-Meteo, "
     "and curated Indian tourism databases to automate end-to-end trip design with expert-level personalization."
 )
 
 col_a1, col_a2, col_a3 = st.columns(3)
 with col_a1:
-    st.markdown("""
-    <div class="feature-card">
-        <h4>⚡ Saves Hours of Planning</h4>
-        <p style="color: #64748B; font-size: 0.92rem;">
-            Eliminates switching across dozens of flight aggregators, booking portals, and travel blogs. 
-            Simply select your destination and preferences in the sidebar to get a synthesized, complete itinerary in seconds.
-        </p>
-    </div>
-    """, unsafe_allow_html=True)
+    st.markdown("""<div class="feature-card">
+<h4>⚡ Saves Hours of Planning</h4>
+<p style="color: #64748B; font-size: 0.92rem;">
+Eliminates switching across dozens of flight aggregators, booking portals, and travel blogs. 
+Simply select your destination and preferences in the sidebar to get a synthesized, complete itinerary in seconds.
+</p>
+</div>""", unsafe_allow_html=True)
 
 with col_a2:
-    st.markdown("""
-    <div class="feature-card">
-        <h4>🎯 Fatigue-Free Realistic Pacing</h4>
-        <p style="color: #64748B; font-size: 0.92rem;">
-            Unlike generic planners that overload 10 sights a day, our engine caps activities to 2–3 daily stops, 
-            respects opening hours, closing days (weekly off), and coordinates return-day flights.
-        </p>
-    </div>
-    """, unsafe_allow_html=True)
+    st.markdown("""<div class="feature-card">
+<h4>🎯 Fatigue-Free Realistic Pacing</h4>
+<p style="color: #64748B; font-size: 0.92rem;">
+Unlike generic planners that overload 10 sights a day, our engine caps activities to 2–3 daily stops, 
+respects opening hours, closing days (weekly off), and coordinates return-day flights.
+</p>
+</div>""", unsafe_allow_html=True)
 
 with col_a3:
-    st.markdown("""
-    <div class="feature-card">
-        <h4>💰 100% Transparent Budgeting</h4>
-        <p style="color: #64748B; font-size: 0.92rem;">
-            Computes true trip cost including flights, hotel nights, customizable daily dining, local transit, 
-            and monument tickets. Differentiates verified rates from estimates with zero hidden math.
-        </p>
-    </div>
-    """, unsafe_allow_html=True)
+    st.markdown("""<div class="feature-card">
+<h4>💰 100% Transparent Budgeting</h4>
+<p style="color: #64748B; font-size: 0.92rem;">
+Computes true trip cost including flights, hotel nights, customizable daily dining, local transit, 
+and monument tickets. Differentiates verified rates from estimates with zero hidden math.
+</p>
+</div>""", unsafe_allow_html=True)
 
 # -----------------------------------------------------------------------------
 # USEFUL TRAVEL TOOLS (BELOW ABOUT SECTION)
@@ -776,42 +776,40 @@ with st_c4:
 # -----------------------------------------------------------------------------
 # MODERN FOOTER
 # -----------------------------------------------------------------------------
-st.markdown("""
-<div class="footer-container">
-    <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px;">
-        <div style="flex: 1.5; min-width: 240px;">
-            <div style="font-size: 1.3rem; font-weight: 800; color: #FFFFFF; display: flex; align-items: center; gap: 8px;">
-                ✈️ VoyAgent AI
-            </div>
-            <p style="font-size: 0.85rem; color: #94A3B8; margin-top: 8px; line-height: 1.5;">
-                An autonomous multi-agent travel concierge powered by LangChain, Open-Meteo, and domestic Indian tourism datasets. Built for academic evaluation and smart travel synthesis.
-            </p>
-        </div>
-        <div style="flex: 1; min-width: 160px;">
-            <div class="footer-title">Navigation</div>
-            <span class="footer-link">🗺️ Personalized Trip Planner</span>
-            <span class="footer-link">⛅ Live Weather Forecast</span>
-            <span class="footer-link">✈️ Historical Flight Lookup</span>
-            <span class="footer-link">🏨 Hotel Discovery Catalogue</span>
-        </div>
-        <div style="flex: 1; min-width: 160px;">
-            <div class="footer-title">Technology</div>
-            <span class="footer-link">🦜 LangChain 1.4+ Agents</span>
-            <span class="footer-link">🌐 Open-Meteo REST API</span>
-            <span class="footer-link">⚡ Streamlit 1.65 Framework</span>
-            <span class="footer-link">🛡️ Pydantic v2 Validation</span>
-        </div>
-        <div style="flex: 1; min-width: 180px;">
-            <div class="footer-title">Academic Project</div>
-            <p style="font-size: 0.85rem; color: #94A3B8; margin-bottom: 6px;">
-                <b>Author:</b> Kartik Prasad<br>
-                <b>Domain:</b> Agentic AI / Tourism Tech<br>
-                <b>Status:</b> 32/32 Pytest Tests Passed
-            </p>
-        </div>
-    </div>
-    <div class="footer-bottom">
-        © 2026 <b>VoyAgent AI</b> — Agentic AI-Based Travel Planning Assistant. Built with Python 3.10 & LangChain.
-    </div>
+st.markdown("""<div class="footer-container">
+<div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px;">
+<div style="flex: 1.5; min-width: 240px;">
+<div style="font-size: 1.3rem; font-weight: 800; color: #FFFFFF; display: flex; align-items: center; gap: 8px;">
+✈️ Smart-Trip-Plan
 </div>
-""", unsafe_allow_html=True)
+<p style="font-size: 0.85rem; color: #94A3B8; margin-top: 8px; line-height: 1.5;">
+An autonomous multi-agent travel concierge powered by LangChain, Open-Meteo, and domestic Indian tourism datasets. Built for smart travel synthesis and autonomous itinerary design.
+</p>
+</div>
+<div style="flex: 1; min-width: 160px;">
+<div class="footer-title">Navigation</div>
+<span class="footer-link">🗺️ Personalized Trip Planner</span>
+<span class="footer-link">⛅ Live Weather Forecast</span>
+<span class="footer-link">✈️ Historical Flight Lookup</span>
+<span class="footer-link">🏨 Hotel Discovery Catalogue</span>
+</div>
+<div style="flex: 1; min-width: 160px;">
+<div class="footer-title">Technology</div>
+<span class="footer-link">🦜 LangChain 1.4+ Agents</span>
+<span class="footer-link">🌐 Open-Meteo REST API</span>
+<span class="footer-link">⚡ Streamlit 1.65 Framework</span>
+<span class="footer-link">🛡️ Pydantic v2 Validation</span>
+</div>
+<div style="flex: 1; min-width: 180px;">
+<div class="footer-title">Platform</div>
+<p style="font-size: 0.85rem; color: #94A3B8; margin-bottom: 6px;">
+<b>Author:</b> Kartik Prasad<br>
+<b>Domain:</b> Agentic AI / Tourism Tech<br>
+<b>Status:</b> 32/32 Pytest Tests Passed
+</p>
+</div>
+</div>
+<div class="footer-bottom">
+© 2026 <b>Smart-Trip-Plan</b> — Agentic AI-Based Travel Planning Assistant. Built with Python 3.10 & LangChain.
+</div>
+</div>""", unsafe_allow_html=True)

@@ -177,7 +177,7 @@ Live API tests were performed against `https://api.open-meteo.com/v1/forecast`:
   Uvicorn running cleanly.
   ```
 - **Major Dashboard Sections Audited:**
-  - Top Navigation Header (`✈️ VoyAgent AI`, Notifications Popover, Profile Popover, Login/Logout Button)
+  - Top Navigation Header (`✈️ Smart-Trip-Plan`, Notifications Popover, Profile Popover, Login/Logout Button)
   - Travel Parameters Sidebar (Origin, Destination, Calendar Date Pickers, Style, Budget customizers)
   - Quick Scenario Presets (Goa, Jaipur, Delhi)
   - Results Tab 1: Day-Wise Schedule with Arrival Logistics and Return Departure Alignment
@@ -186,7 +186,7 @@ Live API tests were performed against `https://api.open-meteo.com/v1/forecast`:
   - Results Tab 4: Itemized Budget Breakdown Table & Cost Distribution Bar Chart
   - Results Tab 5: AI Reasoning & Justifications Tab
   - Results Tab 6: Pydantic Validated JSON Viewer & One-Click JSON Download Button
-  - Home Page: "About VoyAgent AI & How It Helps You" 3-column card section
+  - Home Page: "About Smart-Trip-Plan & How It Helps You" 3-column card section
   - Travel Utilities: Interactive Smart Packing Checklist & Emergency Helpline Directory
   - Modern 4-Column Footer with academic project details
 
