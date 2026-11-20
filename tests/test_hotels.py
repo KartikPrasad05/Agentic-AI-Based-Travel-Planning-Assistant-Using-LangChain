@@ -34,12 +34,19 @@ def test_hotel_search_amenity_filter():
         assert "pool" in [a.lower() for a in hotel.get("amenities", [])] or hotel["is_verified_price"]
 
 
-def test_hotel_search_verified_price_distinction():
-    """Verify that verified prices are distinguished from historical estimates."""
+def test_hotel_search_reference_price_disclosure():
+    """Static project prices must not be labelled as live or booking-verified."""
     res = search_hotels(city="Delhi", limit=10)
     assert res["status"] == "success"
-    has_verified = any(h["is_verified_price"] for h in res["results"])
-    assert has_verified is True, "Reference baseline hotels should be present and flagged as verified price."
+    reference_hotels = [
+        h for h in res["results"]
+        if h["price_source"] == "Project Reference Dataset (not live)"
+    ]
+    assert reference_hotels, "Reference baseline hotels should be present."
+    for hotel in reference_hotels:
+        assert hotel["is_verified_price"] is False
+        assert hotel["review_rating"] is None
+        assert "not live" in hotel["price_source"]
 
 
 def test_hotel_search_empty_city():
